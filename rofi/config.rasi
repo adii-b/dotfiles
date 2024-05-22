@@ -5,7 +5,7 @@
 
 configuration {
 	modi:                       "drun,run,filebrowser";
-	font:                       "CaskaydiaCove Nerd Font 12";
+	font:                       "JetBrainsMono Nerd Font 12";
     show-icons:                 true;
     display-drun:               "Apps";
     display-run:                "Run";
@@ -210,7 +210,7 @@ element-icon {
 }
 element-text {
     //background-color:            transparent;
-    font:                       "CaskaydiaCove Nerd Font 14";
+    font:                       "JetBrainsMono Nerd Font 14";
     text-color:                  inherit;
     cursor:                      inherit;
     vertical-align:              0.5;

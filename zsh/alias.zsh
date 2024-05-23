@@ -20,7 +20,6 @@ alias cd='z'
 alias cdi='zi'
 alias ..='z ..'
 alias ....='z ../..'
-alias gcl='git clone'
 alias cmd='command'
 alias clock='tty-clock -c'
 #

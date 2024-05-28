@@ -1,5 +1,6 @@
 [window]
 opacity = 0.75
+# padding = { x = 15, y = 8 }
 
 [scrolling]
 history = 10000

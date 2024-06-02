@@ -1,13 +1,13 @@
 [window]
 opacity = 0.75
-# padding = { x = 15, y = 8 }
 
 [scrolling]
 history = 10000
 
 [font]
-normal = { family = "JetBrainsMono Nerd Font", style = "regular" }
+normal = { family = "CaskaydiaCove Nerd Font", style = "regular" }
 size = 15.0
+offset.y = 0
 
 [cursor]
 style = { shape = "Beam", blinking = "On"}

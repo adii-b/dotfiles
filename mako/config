@@ -1,6 +1,6 @@
 layer=top
-anchor=top-right
-font=JetBrainsMono Nerd Font 11
+anchor=top-center
+font=JetBrainsMono Nerd Font 10
 width=300
 margin=30,30,30
 padding=10

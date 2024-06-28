@@ -5,11 +5,11 @@ bold_italic_font auto
 
 modify_font cell_height 0px
 
-background_opacity 0.9
+background_opacity 0.95
 
 cursor_shape beam
 
-disable_ligatures always
+disable_ligatures cursor
 
 scrollback_lines 10000
 
@@ -27,6 +27,6 @@ include themes/theme.conf
 
 
 # BEGIN_KITTY_THEME
-# Catppuccin-Mocha
+# Gruvbox Dark Hard
 include current-theme.conf
 # END_KITTY_THEME

@@ -98,7 +98,7 @@
 	  "headphone": "",
 	  "phone": "",
 	  "portable": "",
-	  "default": [" ", " ", " "]
+	  "default": ["", "", " "]
 	},
 	"on-click-left": "pavucontrol",
 	"input": true

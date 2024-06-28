@@ -3,6 +3,8 @@ BraveSoftware
 Code
 dconf
 eog
+evolution*
+gnome-session
 gtk-3.0
 htop
 micro
@@ -16,6 +18,7 @@ Postman
 pulse
 rog
 spotify
+systemd
 Unknown*
 user-dirs.*
 vlc

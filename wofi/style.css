@@ -13,8 +13,8 @@ Wofi Config File by Arfan Zubi
 
 window {
     padding: 50px;
-    /* background-color: rgba(45, 53, 59, 0.85); */
-    background-color: #282828;
+    background-color: rgba(40, 40, 40, 0.85);
+    /* background-color: #282828; */
     font-family: 'JetBrainsMono Nerd Font', sans-serif;
     font-size: 19px;
 }

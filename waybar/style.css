@@ -195,8 +195,8 @@ window#waybar {
   margin-bottom: 2px;
   color: @fg;
   background-color: @bg;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
 
@@ -216,12 +216,12 @@ window#waybar {
 
 #backlight,
 #pulseaudio {
-	margin-right: 0px;
+	margin-right: 5px;
 	margin-left: 5px;
 	padding-left: 10px;
   	padding-right: 7.5px;
-	border-top-right-radius: 0px;
-	border-bottom-right-radius: 0px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
 	border-top-left-radius: 3px;
 	border-bottom-left-radius: 3px;
 }

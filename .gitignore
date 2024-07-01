@@ -5,6 +5,7 @@ dconf
 eog
 evolution*
 gnome-session
+.gsd-keyboard.settings-ported
 gtk-3.0
 htop
 micro
@@ -12,10 +13,12 @@ mimeapps.list
 MongoDB*
 nwg-look
 obsidian
+obs-studio/
 onlyoffice
 pavucontrol*
 Postman
 pulse
+QtProject.conf
 rog
 spotify
 systemd

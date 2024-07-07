@@ -15,25 +15,20 @@ file_exists() {
 }
 
 # Kill already running processes
-_ps=(waybar rofi swaync ags)
+_ps=(waybar)
 for _prs in "${_ps[@]}"; do
     if pidof "${_prs}" >/dev/null; then
         pkill "${_prs}"
     fi
 done
 
-ags -q
-
 sleep 0.3
 # Relaunch waybar
 waybar &
 
 # relaunch swaync
-sleep 0.5
-swaync > /dev/null 2>&1 &
 
 # relaunch ags
-ags &
 
 # Relaunching rainbow borders if the script exists
 sleep 1
@@ -42,6 +37,6 @@ sleep 1
 # fi
 
 # for cava-pywal (note, need to manually restart cava once wallpaper changes)
-ln -sf "$HOME/.cache/wal/cava-colors" "$HOME/.config/cava/config" || true
+# ln -sf "$HOME/.cache/wal/cava-colors" "$HOME/.config/cava/config" || true
 
 exit 0

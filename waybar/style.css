@@ -25,8 +25,8 @@
   margin: 0;
   padding: 0;
   border-radius: 7px;
-  font-family: "UbuntuMono Nerd Font";
-  font-size: 14pt;
+  font-family: "FantasqueSansM Nerd Font";
+  font-size: 13pt;
   font-weight: 700;
   padding-bottom: 0px;
 }
@@ -231,6 +231,7 @@ window#waybar {
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 3px;
+  font-weight: 600;
   color: @bg;
   background-color: @green;
 }

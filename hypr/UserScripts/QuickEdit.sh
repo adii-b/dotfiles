@@ -4,7 +4,7 @@
 configs="$HOME/.config/hypr/configs"
 UserConfigs="$HOME/.config/hypr/UserConfigs"
 
-menu(){
+menu() {
   printf "View Env-variables\n"
   printf "View Window-Rules\n"
   printf "View Startup_Apps\n"
@@ -18,41 +18,40 @@ menu(){
 }
 
 main() {
-    choice=$(menu | wofi --show=dmenu  )
-    case $choice in
-        *"View Env-variables")
-            kitty -e vim "$UserConfigs/ENVariables.conf"
-            ;;
-        *"View Window-Rules")
-            kitty -e vim "$UserConfigs/WindowRules.conf"
-            ;;
-        *"View Startup_Apps")
-            kitty -e vim "$UserConfigs/Startup_Apps.conf"
-            ;;
-        *"View User-Keybinds")
-            kitty -e vim "$UserConfigs/UserKeybinds.conf"
-            ;;
-        *"View Monitors")
-            kitty -e vim "$UserConfigs/Monitors.conf"
-            ;;
-        *"View Laptop-Keybinds")
-            kitty -e vim "$UserConfigs/Laptops.conf"
-            ;;
-        *"View User-Settings")
-            kitty -e vim "$UserConfigs/UserSettings.conf"
-            ;;
-        *"View Workspace-Rules")
-            kitty -e vim "$UserConfigs/WorkspaceRules.conf"
-            ;;
-        *"View Default-Settings")
-            kitty -e vim "$configs/Settings.conf"
-            ;;
-        *"View Default-Keybinds")
-            kitty -e vim "$configs/Keybinds.conf"
-            ;;
-        *)
-            ;;
-    esac
+  choice=$(menu | wofi --show=dmenu)
+  case $choice in
+  *"View Env-variables")
+    kitty -e nvim "$UserConfigs/ENVariables.conf"
+    ;;
+  *"View Window-Rules")
+    kitty -e nvim "$UserConfigs/WindowRules.conf"
+    ;;
+  *"View Startup_Apps")
+    kitty -e nvim "$UserConfigs/Startup_Apps.conf"
+    ;;
+  *"View User-Keybinds")
+    kitty -e nvim "$UserConfigs/UserKeybinds.conf"
+    ;;
+  *"View Monitors")
+    kitty -e nvim "$UserConfigs/Monitors.conf"
+    ;;
+  *"View Laptop-Keybinds")
+    kitty -e nvim "$UserConfigs/Laptops.conf"
+    ;;
+  *"View User-Settings")
+    kitty -e nvim "$UserConfigs/UserSettings.conf"
+    ;;
+  *"View Workspace-Rules")
+    kitty -e nvim "$UserConfigs/WorkspaceRules.conf"
+    ;;
+  *"View Default-Settings")
+    kitty -e nvim "$configs/Settings.conf"
+    ;;
+  *"View Default-Keybinds")
+    kitty -e nvim "$configs/Keybinds.conf"
+    ;;
+  *) ;;
+  esac
 }
 
 main

@@ -15,8 +15,8 @@ window {
     padding: 50px;
     background-color: rgba(40, 40, 40, 0.85);
     /* background-color: #282828; */
-    font-family: 'CaskaydiaCove Nerd Font', sans-serif;
-    font-size: 19px;
+    font-family: 'JetBrainsMono Nerd Font', sans-serif;
+    font-size: 20px;
 }
 
 #input {

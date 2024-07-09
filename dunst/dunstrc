@@ -285,7 +285,7 @@
     foreground = "#fbf1c7"
     highlight = "#93AA73"
     #frame_color = "#2c2c2c"
-    timeout = 2
+    timeout = 4
     # Icon for notifications with low urgency, uncomment to enable
     icon = ~/.config/dunst/images/notification.png
 
@@ -294,7 +294,7 @@
     foreground = "#fbf1c7"
     highlight = "#93AA73"
     #frame_color = "#2c2c2c"
-    timeout = 2
+    timeout = 4
     # Icon for notifications with normal urgency, uncomment to enable
     icon = ~/.config/dunst/images/notification.png
 

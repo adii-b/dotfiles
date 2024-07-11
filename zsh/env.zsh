@@ -1,5 +1,4 @@
 # Env variables
-
 export MICRO_TRUECOLOR=1
 export EDITOR='nvim' 
 export PATH="$PATH:/home/aditya/.dotnet/tools"

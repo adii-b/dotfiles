@@ -24,4 +24,4 @@ alias ..='z ..'
 alias ....='z ../..'
 alias cmd='command'
 alias clock='tty-clock -c'
-#
+alias gt='gnome-text-editor'

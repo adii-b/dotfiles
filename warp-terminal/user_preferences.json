@@ -1,0 +1,23 @@
+{
+  "prefs": {
+    "WelcomeTipsFeaturesUsed": "[{\"Hint\":\"BlockAction\"},{\"Action\":\"ThemePicker\"},{\"Hint\":\"CreateBlock\"},{\"Action\":\"OpenWarpDrive\"}]",
+    "AutosuggestionAcceptedCount": "2",
+    "InputAutodetectionBannerDismissed": "true",
+    "HasAutoOpenedWelcomeFolder": "true",
+    "ReceivedReferralTheme": "\"Inactive\"",
+    "AIRequestLimitInfo": "{\"limit\":40,\"num_requests_used_since_refresh\":1,\"next_refresh_time\":\"2024-08-10T10:38:46.136726Z\"}",
+    "AIAssistantRequestLimitInfo": "{\"limit\":40,\"num_requests_used_since_refresh\":0,\"next_refresh_time\":\"2024-08-10T10:38:46.136726904Z\"}",
+    "CrashReportingEnabled": "true",
+    "VimKeybindingsBannerState": "\"Dismissed\"",
+    "NotebookFontSize": "14.0",
+    "FontName": "\"JetBrainsMono Nerd Font\"",
+    "ExperimentId": "e83fff23-36ff-47ba-a2c4-4e537f86ae92",
+    "AliasExpansionEnabled": "true",
+    "AliasExpansionBannerSeen": "true",
+    "FontSize": "13.0",
+    "TelemetryEnabled": "true",
+    "AgentModeOnboardingBlockShown": "true",
+    "ChangelogVersions": "{\"v0.2024.06.25.08.02.stable_01\":true}",
+    "Theme": "\"GruvboxDark\""
+  }
+}

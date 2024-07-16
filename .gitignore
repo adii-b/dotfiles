@@ -30,3 +30,5 @@ xfce4
 xsettingsd
 yay
 zoom*
+__pycache__/*
+VirtualBox

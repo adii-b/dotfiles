@@ -32,3 +32,5 @@ yay
 zoom*
 __pycache__/*
 VirtualBox
+Proton*
+zed/.*

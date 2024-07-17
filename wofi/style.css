@@ -13,7 +13,7 @@ Wofi Config File by Arfan Zubi
 
 window {
     padding: 50px;
-    background-color: rgba(40, 40, 40, 0.85);
+    background-color: rgba(30, 30, 46, 0.8);
     /* background-color: #282828; */
     font-family: 'JetBrainsMono Nerd Font', sans-serif;
     font-size: 20px;
@@ -22,9 +22,9 @@ window {
 #input {
     margin: 20px 15px;
     padding: 10px 20px;
-    background-color: #323D43;
+    background-color: rgba(69, 71, 90, 0.8);
     border: none;
-    color: #D3C6AA;
+    color: #white;
 }
 
 #input:focus {
@@ -46,14 +46,14 @@ window {
 }
 
 #entry:selected {
-    background-color: #98971A;
+    background-color: #CFA2F2;
     border-radius: 5px;
 }
 
 #text {
-    color: #D3C6AA;
+    color: white;
 }
 
 #text:selected {
-    color: #2D353B;
+    color: black;
 }

@@ -1,18 +1,15 @@
 #!/bin/bash
 # /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
-# Clipboard Manager. This script uses cliphist, rofi, and wl-copy.
+# Clipboard Manager. This script uses cliphist, wofi, and wl-copy.
 
-# Actions:
-# CTRL Del to delete an entry
-# ALT Del to wipe clipboard contents
+# Get clipboard history from cliphist and format it to exclude IDs
+history=$(cliphist list | awk '{$1=""; print substr($0, 2)}')
 
-#!/bin/bash
-#!/bin/bash
+# Display clipboard history using wofi and capture the selected entry
+selected=$(echo "$history" | wofi --dmenu --prompt="Clipboard History: ")
 
-# Get clipboard history from cliphist
-history=$(cliphist list)
-
-# Display clipboard history using wofi
-echo "$history" | wofi --dmenu --prompt="Clipboard History: "| wl-copy
-
-
+# Copy the selected item to the clipboard if not empty
+if [ -n "$selected" ]; then
+  echo "$selected" | wl-copy
+  notify-send "Selected item copied to clipboard"
+fi

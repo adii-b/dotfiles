@@ -7,10 +7,10 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "ui_font_size": 16,
-  "ui_font_family": "JetBrainsMono Nerd Font",
-  "buffer_font_size": 20,
-  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "ui_font_size": 17,
+  "ui_font_family": "Hack Nerd Font",
+  "buffer_font_size": 22,
+  "buffer_font_family": "Consolas",
   "format_on_save": "on",
   "theme": {
     "mode": "dark",
@@ -18,8 +18,8 @@
     "dark": "Catppuccin Mocha"
   },
   "terminal": {
-    "font_family": "JetBrainsMono Nerd Font",
-    "font_size": 17,
+    "font_family": "Mononoki Nerd Font",
+    "font_size": 19,
     "copy_on_select": true,
     "font_features": {},
     "working_directory": "current_project_directory"

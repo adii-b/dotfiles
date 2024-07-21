@@ -29,7 +29,7 @@
   },
   "hyprland/window": {
     "format": "{title}",
-    "max-length": 40,
+    "max-length": 30,
     "seperate-outputs": true
   },
   "memory": {
@@ -73,7 +73,7 @@
   "custom/playerctl": {
     "format": "{icon}  <span>{}</span>",
     "return-type": "json",
-    "max-length": 30,
+    "max-length": 20,
     "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} ~ {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
     "on-click-middle": "playerctl play-pause",
     "on-click": "playerctl previous",
@@ -84,9 +84,27 @@
     }
   },
   "clock": {
+    "format": "<span>{:%I:%M %a %d}</span>",
     "tooltip-format": "{calendar}",
-    "format-alt": "  {:%a, %d %b %Y}",
-    "format": "{:%I:%M %p}"
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "on-scroll": 1,
+      "on-click-right": "mode",
+      "format": {
+        "months": "<span color='#cdd6f4'><b>{}</b></span>",
+        "days": "<span color='#CDD6F4'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>{%W}</b></span>",
+        "weekdays": "<span color='#F9E2AF'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b>{}</b></span>"
+      }
+    },
+    "actions": {
+      "on-click-middle": "mode",
+      "on-click-right": "shift_up",
+      "on-click": "shift_down"
+    }
+    /*"format-alt": "<span foreground='#89dceb'> </span><span>{:%H:%M}</span>"*/
   },
   "network": {
     "format-wifi": "{icon}",

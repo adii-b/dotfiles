@@ -17,7 +17,6 @@ alias system_cleanup='rm -rf ~/.cache/* && yay -Sc && sudo journalctl --vacuum-t
 alias error_logs='sudo journalctl -p 3 -xb'
 alias md='mkdir'
 alias rd='rmdir'
-alias grep='rg'
 alias man='batman'
 alias cd='z'
 alias cdi='zi'

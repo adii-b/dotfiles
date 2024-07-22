@@ -6,7 +6,7 @@
 history=$(cliphist list | awk '{$1=""; print substr($0, 2)}')
 
 # Display clipboard history using wofi and capture the selected entry
-selected=$(echo "$history" | wofi --dmenu --prompt="Clipboard History: ")
+selected=$(echo "$history" | wofi --dmenu --prompt="Clipboard History: " -c ~/.config/wofi/clipboard -s ~/.config/wofi/edit.css)
 
 # Copy the selected item to the clipboard if not empty
 if [ -n "$selected" ]; then

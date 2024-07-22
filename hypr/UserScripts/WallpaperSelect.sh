@@ -1,84 +1,39 @@
 #!/bin/bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
-# This script for selecting wallpapers (SUPER W)
 
-SCRIPTSDIR="$HOME/.config/hypr/scripts"
+# Directory where wallpapers are stored
+WALLPAPER_DIR=~/Pictures/wallpapers
 
-# WALLPAPERS PATH
-wallDIR="$HOME/Pictures/wallpapers"
+# Get a list of valid wallpaper files
+FILES=$(find "$WALLPAPER_DIR" -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.gif" \) | sort)
+FILENAMES=$(echo "$FILES" | while read -r FILE; do basename "$FILE"; done)
 
-# Transition config
-FPS=30
-TYPE="wipe"
-DURATION=1
-BEZIER=".43,1.19,1,.4"
-SWWW_PARAMS="--transition-fps $FPS --transition-type $TYPE --transition-duration $DURATION"
-
-# Check if swaybg is running
-if pidof swaybg > /dev/null; then
-  pkill swaybg
+# Check if there are any files
+if [ -z "$FILENAMES" ]; then
+  echo "No wallpapers found."
+  exit 1
 fi
 
-# Retrieve image files
-PICS=($(ls "${wallDIR}" | grep -E ".jpg$|.jpeg$|.png$|.gif$"))
+# Use wofi to select a file
+SELECTED_FILE=$(echo "$FILENAMES" | wofi --dmenu --prompt "Select Wallpaper:" -s ~/.config/wofi/edit.css)
 
-# Rofi command
-rofi_command="wofi --show dmenu"
-
-menu() {
-  for i in "${!PICS[@]}"; do
-    # Displaying .gif to indicate animated images
-    if [[ -z $(echo "${PICS[$i]}" | grep .gif$) ]]; then
-      printf "$(echo "${PICS[$i]}" | cut -d. -f1)\x00icon\x1f${wallDIR}/${PICS[$i]}\n"
-    else
-      printf "${PICS[$i]}\n"
-    fi
-  done
-}
-
-swww query || swww-daemon --format xrgb
-
-main() {
-  choice=$(menu | ${rofi_command})
-
-  # No choice case
-  if [[ -z $choice ]]; then
-    exit 0
-  fi
-
-  # Random choice case
-  if [ "$choice" = "$RANDOM_PIC_NAME" ]; then
-    swww img "${wallDIR}/${RANDOM_PIC}" $SWWW_PARAMS
-    exit 0
-  fi
-
-  # Find the index of the selected file
-  pic_index=-1
-  for i in "${!PICS[@]}"; do
-    filename=$(basename "${PICS[$i]}")
-    if [[ "$filename" == "$choice"* ]]; then
-      pic_index=$i
-      break
-    fi
-  done
-
-  if [[ $pic_index -ne -1 ]]; then
-    swww img "${wallDIR}/${PICS[$pic_index]}" $SWWW_PARAMS
-  else
-    echo "Image not found."
-    exit 1
-  fi
-}
-
-# Check if rofi is already running
-if pidof rofi > /dev/null; then
-  pkill rofi
-  exit 0
+# Check if a file was selected
+if [ -z "$SELECTED_FILE" ]; then
+  echo "No wallpaper selected."
+  exit 1
 fi
 
-main
+# Find the full path of the selected file
+SELECTED_PATH=$(echo "$FILES" | while read -r FILE; do
+  if [ "$(basename "$FILE")" == "$SELECTED_FILE" ]; then
+    echo "$FILE"
+    break
+  fi
+done)
 
-sleep 0.5
-${SCRIPTSDIR}/PywalSwww.sh
-sleep 0.2
-${SCRIPTSDIR}/Refresh.sh
+# Set the selected file as wallpaper
+swww img "$SELECTED_PATH"
+
+# Send a notification
+notify-send "Wallpaper Changed" "Wallpaper changed to $SELECTED_FILE."
+
+echo "Wallpaper changed to $SELECTED_FILE."

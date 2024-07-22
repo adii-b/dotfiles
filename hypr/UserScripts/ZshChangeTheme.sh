@@ -1,38 +1,33 @@
 #!/bin/bash
 
-themes_dir="$HOME/.oh-my-zsh/themes"
-file_extension=".zsh-theme"
+# Directory where Oh My Zsh themes are stored
+THEMES_DIR=~/.oh-my-zsh/themes
 
-themes_array=($(find "$themes_dir" -type f -name "*$file_extension" -exec basename {} \; | sed -e "s/$file_extension//"))
+# Get a list of theme files (excluding the .zsh-theme extension)
+THEMES=$(ls "$THEMES_DIR" | grep -E '\.zsh-theme$' | sed 's/\.zsh-theme$//')
 
-rofi_command="wofi --show dmenu"
+# Check if there are any themes
+if [ -z "$THEMES" ]; then
+  echo "No themes found."
+  exit 1
+fi
 
-menu() {
-    for theme in "${themes_array[@]}"; do
-        echo "$theme"
-    done
-}
+# Use wofi to select a theme
+SELECTED_THEME=$(echo "$THEMES" | wofi --dmenu --prompt "Select Zsh Theme:" -s ~/.config/wofi/edit.css)
 
-main() {
-    choice=$(menu | ${rofi_command})
+# Check if a theme was selected
+if [ -z "$SELECTED_THEME" ]; then
+  echo "No theme selected."
+  exit 1
+fi
 
-    # if nothing selected, script wont change anything
-    if [ -z "$choice" ]; then
-        exit 0
-    fi
+# Update the .zshrc file with the selected theme
+sed -i "s/^ZSH_THEME=.*/ZSH_THEME=\"$SELECTED_THEME\"/" ~/.zshrc
 
-    zsh_path="$HOME/.zshrc"
-    var_name="ZSH_THEME"
-    for i in "${themes_array[@]}"; do
-        if [[ "$i" == "$choice"* ]]; then
-            if [ -f "$zsh_path" ]; then
-                sed -i "s/^$var_name=.*/$var_name=\"$i\"/" "$zsh_path"
-            else
-                echo "File not found"
-            fi
-            break
-        fi
-    done
-}
+# Apply the changes by reloading .zshrc
+source ~/.zshrc
 
-main
+# Send a notification
+notify-send "Zsh Theme changed to $SELECTED_THEME."
+
+echo "Theme changed to $SELECTED_THEME and applied."

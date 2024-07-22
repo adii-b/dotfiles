@@ -8,9 +8,9 @@
 // from the command palette or from `Zed` application menu.
 {
   "ui_font_size": 17,
-  "ui_font_family": "Hack Nerd Font",
+  "ui_font_family": "CaskaydiaCove Nerd Font",
   "buffer_font_size": 22,
-  "buffer_font_family": "Consolas",
+  "buffer_font_family": "Mononoki Nerd Font",
   "format_on_save": "on",
   "theme": {
     "mode": "dark",

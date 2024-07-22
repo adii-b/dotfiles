@@ -18,7 +18,7 @@ menu() {
 }
 
 main() {
-  choice=$(menu | wofi --show=dmenu)
+  choice=$(menu | wofi --show=dmenu -s ~/.config/wofi/edit.css)
   case $choice in
   *"View Env-variables")
     kitty -e nvim "$UserConfigs/ENVariables.conf"

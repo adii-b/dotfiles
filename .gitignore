@@ -5,11 +5,13 @@ dconf
 eog
 evolution*
 gnome-session
+gnome-boxes
 .gsd-keyboard.settings-ported
 gtk-3.0
 htop
 JetBrains
 lazygit
+libvirt*
 micro
 mimeapps.list
 MongoDB*
@@ -31,7 +33,7 @@ xfce4
 xsettingsd
 yay
 zoom*
-__pycache__/*
+__pycache__/
 VirtualBox
 Proton*
 zed/.*

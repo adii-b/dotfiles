@@ -2,6 +2,7 @@
 source <(fzf --zsh)
 
 eval "$(zoxide init zsh)"
+eval "$(oh-my-posh init zsh --config ~/.cache/oh-my-posh/themes/catppuccin_mocha.omp.json)"
 
 HISTFILE=~/.zsh_history
 HISTSIZE=10000

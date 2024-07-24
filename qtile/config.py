@@ -43,9 +43,7 @@ def start_once():
         [
             "feh",
             "--bg-scale",
-            os.path.expanduser(
-                "~/Pictures/wallpapers/ghibli-japanese-walled-garden.png"
-            ),
+            os.path.expanduser("~/Pictures/wallpapers/forest_dark_winter.jpg"),
         ]
     )
     subprocess.Popen(["xrdb", "-merge", os.path.expanduser("~/.Xresources")])
@@ -191,7 +189,6 @@ screens = [
                     },
                     name_transform=lambda name: name.upper(),
                 ),
-                widget.TextBox("default config", name="default"),
                 widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
                 # widget.StatusNotifier(),

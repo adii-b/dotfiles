@@ -34,7 +34,8 @@ xfce4
 xsettingsd
 yay
 zoom*
-__pycache__/
+nvim/lazy-lock.json
+ranger/__pycache__
 VirtualBox
 Proton*
 zed/.*

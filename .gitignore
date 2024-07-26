@@ -36,6 +36,7 @@ yay
 zoom*
 nvim/lazy-lock.json
 ranger/__pycache__
+ranger/plugins/__pycache__
 VirtualBox
 Proton*
 zed/.*

@@ -2,7 +2,7 @@
   border: none;
   border-radius: 0;
   min-height: 0;
-  font-family: JetBrainsMono Nerd Font;
+  font-family: Mononoki Nerd Font;
   font-size: 13pt;
   font-weight: 600;
 }
@@ -19,7 +19,7 @@ window#waybar.hidden {
 }
 
 #workspaces {
-  background-color: transparent;
+  background-color: transparent; 
 }
 
 #workspaces button {
@@ -31,7 +31,7 @@ window#waybar.hidden {
   /* Use box-shadow instead of border so the text isn't offset */
   padding: 6px 12px;
   margin: 6px 3px;
-  border-radius: 4px;
+  border-radius: 20px;
   background-color: #1e1e2e;
   color: #cdd6f4;
 }
@@ -39,7 +39,7 @@ window#waybar.hidden {
 #window {
   background-color: #a6e3a1;
   color: #1e1e2e;
-  border-radius: 4px;
+  border-radius: 20px;
   padding: 6px 12px;
   margin: 6px 3px;
 }
@@ -53,7 +53,7 @@ window#waybar.empty #window {
 #custom-playerctl {
   padding: 6px 12px;
   color: black;
-  border-radius: 4px;
+  border-radius: 20px;
   margin: 6px 3px;
   background-color: #fab387;
 }
@@ -81,7 +81,7 @@ window#waybar.empty #window {
 #pulseaudio,
 #network,
 #tray {
-  border-radius: 4px;
+  border-radius: 20px;
   margin: 6px 3px;
   padding: 6px 12px;
   background-color: #1e1e2e;
@@ -93,7 +93,7 @@ window#waybar.empty #window {
 }
 
 #clock {
-  border-radius: 4px;
+  border-radius: 20px;
   margin: 6px 3px;
   padding: 6px 12px;
   margin-right: 8px; 
@@ -117,7 +117,7 @@ window#waybar.empty #window {
 #cpu {
   background-color: #74c7ec;
   color: #1e1e2e;
-  border-radius: 4px;
+  border-radius: 20px;
   padding: 6px 12px;
   margin: 6px 3px;
   margin-left: 8px;
@@ -126,7 +126,7 @@ window#waybar.empty #window {
 #temperature {
   background-color: #eba0ac;
   color: #1e1e2e;
-  border-radius: 4px;
+  border-radius: 20px;
   padding: 6px 12px;
   margin: 6px 3px;
 }
@@ -165,7 +165,7 @@ window#waybar.empty #window {
 }
 
 #clock {
-  font-family: JetBrainsMono Nerd Font;
+  font-family: Mononoki Nerd Font;
   background-color: #cba6f7;
 }
 

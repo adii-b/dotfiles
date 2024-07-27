@@ -22,7 +22,8 @@ window {
 #input {
     margin: 20px 15px;
     padding: 10px 20px;
-    background-color: rgb(49, 50, 68);
+    /*background-color: rgb(49, 50, 68);*/
+    background-color: transparent;
     border: none;
     color: #cdd6f4;
 }

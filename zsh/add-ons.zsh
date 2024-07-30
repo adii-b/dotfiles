@@ -3,7 +3,7 @@ source <(fzf --zsh)
 
 eval "$(zoxide init zsh)"
 # eval "$(oh-my-posh init zsh --config ~/.cache/oh-my-posh/themes/emodipt-extend.omp.json)"
-eval "$(oh-my-posh init zsh --config ~/.cache/oh-my-posh/themes/atomic.omp.json)"
+eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/atomic.omp.json)"
 
 
 HISTFILE=~/.zsh_history

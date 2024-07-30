@@ -2,9 +2,9 @@
   border: none;
   border-radius: 0;
   min-height: 0;
-  font-family: '0xProto Nerd Font';
+  font-family: 'FiraCode Nerd Font';
   font-size: 12pt;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 window#waybar {
@@ -165,7 +165,7 @@ window#waybar.empty #window {
 }
 
 #clock {
-  font-family: '0xProto Nerd Font';
+  font-family: 'FiraCode Nerd Font';
   background-color: #cba6f7;
 }
 

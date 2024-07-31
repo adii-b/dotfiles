@@ -8,9 +8,9 @@
 // from the command palette or from `Zed` application menu.
 {
   "ui_font_size": 18,
-  "ui_font_family": "FiraCodeNF-Ret",
+  "ui_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_size": 22,
-  "buffer_font_family": "FiraCodeNF-Ret",
+  "buffer_font_family": "JetBrainsMono Nerd Font",
   "format_on_save": "on",
   "theme": {
     "mode": "dark",
@@ -18,7 +18,7 @@
     "dark": "Catppuccin Mocha"
   },
   "terminal": {
-    "font_family": "FiraCodeNF-Ret",
+    "font_family": "JetBrainsMono Nerd Font",
     "font_size": 19,
     "copy_on_select": true,
     "font_features": {},

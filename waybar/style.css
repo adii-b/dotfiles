@@ -2,7 +2,7 @@
   border: none;
   border-radius: 0;
   min-height: 0;
-  font-family: 'JetBrainsMono Nerd Font';
+  font-family: 'SauceCodePro Nerd Font';
   font-size: 15px;
   font-weight: 600;
 }
@@ -165,7 +165,6 @@ window#waybar.empty #window {
 }
 
 #clock {
-  font-family: 'JetBrainsMono Nerd Font';
   background-color: #cba6f7;
 }
 

@@ -25,7 +25,7 @@ error_symbol = "[➜](bold red)"
 #  
 # configure directory
 [directory]
-read_only = " "
+read_only = " 🔒"
 truncation_length = 10
 truncate_to_repo = true    # truncates directory to root folder if in github repo
 style = "bold italic blue"
@@ -35,21 +35,22 @@ min_time = 4
 show_milliseconds = false
 disabled = false
 style = "bold italic red"
+format = "took [$duration]($style) "
 
 [aws]
-symbol = "  "
+symbol = " "
 
 [conda]
-symbol = " "
+symbol = "🅒 "
 
 [dart]
-symbol = " "
+symbol = "🎯"
 
 #[directory]
 #read_only = ""
 
 [docker_context]
-symbol = " "
+symbol = "🐳"
 format = "via [$symbol$context]($style) "
 style = "blue bold"
 only_with_files = true
@@ -58,10 +59,10 @@ detect_folders = []
 disabled = false
 
 [elixir]
-symbol = " "
+symbol = "💧 "
 
 [elm]
-symbol = " "
+symbol = "🌳 "
 
 [git_branch]
 symbol = " "
@@ -99,7 +100,7 @@ symbol = " "
 symbol = "☕ "
 
 [julia]
-symbol = " "
+symbol = "ஃ "
 
 [haskell]
 symbol = "λ "
@@ -108,19 +109,19 @@ symbol = "λ "
 symbol = " "
 
 [nim]
-symbol = " "
+symbol = "👑 "
 
 [nix_shell]
 symbol = " "
 
 [package]
-symbol = " "
+symbol = "📦 "
 
 [perl]
-symbol = " "
+symbol = "🐪 "
 
 [php]
-symbol = " "
+symbol = "🐘 "
 
 [python]
 symbol = "🐍 "
@@ -133,21 +134,22 @@ detect_extensions = ["py"]
 version_format = "v${raw}"
 
 [ruby]
-symbol = " "
+symbol = "💎 "
 
 [rust]
-symbol = " "
+symbol = "🦀 "
 
 [scala]
-symbol = " "
+symbol = "🆂 "
 
 [shlvl]
-symbol = " "
+symbol = "  "
 
 [swift]
-symbol = "🐦"
+symbol = "🐦 "
 
 [nodejs]
+symbol = " "
 detect_files = ["package.json", ".node-version"]
 detect_folders = ["node_modules"]
 format = "via [󰎙 Node.js $version](bold green) "

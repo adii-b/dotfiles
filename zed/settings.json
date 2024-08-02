@@ -18,7 +18,7 @@
     "dark": "Catppuccin Mocha"
   },
   "terminal": {
-    "font_family": "FiraCode Nerd Font Ret",
+    "font_family": "JetBrainsMono Nerd Font",
     "font_size": 19,
     "copy_on_select": true,
     "font_features": {},

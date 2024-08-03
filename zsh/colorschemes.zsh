@@ -6,4 +6,3 @@ export FZF_DEFAULT_OPTS=" \
 
 export BAT_THEME='Catppuccin Mocha'
 
-source ~/.config/zsh/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh

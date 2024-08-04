@@ -18,36 +18,36 @@ menu() {
 }
 
 main() {
-  choice=$(menu | wofi --show=dmenu -s ~/.config/wofi/edit.css)
+  choice=$(menu | rofi -dmenu -i -p "Select a file to edit:")
   case $choice in
-  *"View Env-variables")
+  "View Env-variables")
     kitty -e nvim "$UserConfigs/ENVariables.conf"
     ;;
-  *"View Window-Rules")
+  "View Window-Rules")
     kitty -e nvim "$UserConfigs/WindowRules.conf"
     ;;
-  *"View Startup_Apps")
+  "View Startup_Apps")
     kitty -e nvim "$UserConfigs/Startup_Apps.conf"
     ;;
-  *"View User-Keybinds")
+  "View User-Keybinds")
     kitty -e nvim "$UserConfigs/UserKeybinds.conf"
     ;;
-  *"View Monitors")
+  "View Monitors")
     kitty -e nvim "$UserConfigs/Monitors.conf"
     ;;
-  *"View Laptop-Keybinds")
+  "View Laptop-Keybinds")
     kitty -e nvim "$UserConfigs/Laptops.conf"
     ;;
-  *"View User-Settings")
+  "View User-Settings")
     kitty -e nvim "$UserConfigs/UserSettings.conf"
     ;;
-  *"View Workspace-Rules")
+  "View Workspace-Rules")
     kitty -e nvim "$UserConfigs/WorkspaceRules.conf"
     ;;
-  *"View Default-Settings")
+  "View Default-Settings")
     kitty -e nvim "$configs/Settings.conf"
     ;;
-  *"View Default-Keybinds")
+  "View Default-Keybinds")
     kitty -e nvim "$configs/Keybinds.conf"
     ;;
   *) ;;

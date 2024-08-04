@@ -13,8 +13,8 @@ if [ -z "$FILENAMES" ]; then
   exit 1
 fi
 
-# Use wofi to select a file
-SELECTED_FILE=$(echo "$FILENAMES" | wofi --dmenu --prompt "Select Wallpaper:" -s ~/.config/wofi/edit.css)
+# Use rofi to select a file
+SELECTED_FILE=$(echo "$FILENAMES" | rofi -dmenu -i -p "Select Wallpaper:")
 
 # Check if a file was selected
 if [ -z "$SELECTED_FILE" ]; then

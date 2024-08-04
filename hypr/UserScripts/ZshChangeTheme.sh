@@ -12,8 +12,8 @@ if [ -z "$THEMES" ]; then
   exit 1
 fi
 
-# Use wofi to select a theme
-SELECTED_THEME=$(echo "$THEMES" | wofi --dmenu --prompt "Select Zsh Theme:" -s ~/.config/wofi/edit.css)
+# Use rofi to select a theme
+SELECTED_THEME=$(echo "$THEMES" | rofi -dmenu -i -p "Select Zsh Theme:")
 
 # Check if a theme was selected
 if [ -z "$SELECTED_THEME" ]; then

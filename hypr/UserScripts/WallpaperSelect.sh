@@ -31,7 +31,7 @@ SELECTED_PATH=$(echo "$FILES" | while read -r FILE; do
 done)
 
 # Set the selected file as wallpaper
-swww img "$SELECTED_PATH"
+swww img "$SELECTED_PATH" --transition-step 240 --transition-fps 60 --transition-type outer --transition-pos top-right
 
 # Send a notification
 notify-send "Wallpaper Changed" "Wallpaper changed to $SELECTED_FILE."

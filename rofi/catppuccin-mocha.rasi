@@ -9,6 +9,7 @@
     grey: rgba(108, 112, 134, 1.0);
     width: 550;
     font: "JetBrainsMono Nerd Font 17";
+    border-radius: 15px;
 }
 
 element-text, element-icon , mode-switcher {

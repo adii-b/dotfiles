@@ -1,17 +1,10 @@
 alias ls='eza --icons --group-directories-first'
 alias ll='eza -la --header --icons --no-filesize --group-directories-first' # show long listing of all except ".."
-alias pacs='sudo pacman -S'
-alias pacsyu='sudo pacman -Syu'
-alias pacsyy='sudo pacman -Syy'
-alias pacsyyu='sudo pacman -Syyu'
-alias pacrns='sudo pacman -Rns'
 alias pacqtdq='sudo pacman -Rns $(pacman -Qtdq)'
 alias update_mirrors='sudo reflector -c India --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist && eos-rankmirrors'
 alias gen_grub_config='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias system_cleanup='rm -rf ~/.cache/* && yay -Sc && sudo journalctl --vacuum-time=1hour'
 alias error_logs='sudo journalctl -p 3 -xb'
-alias md='mkdir'
-alias rd='rmdir'
 alias l='eza -la --header --icons --group-directories-first' # show long listing but no hidden dotfiles except ".
 alias lt='eza --tree '
 alias la='eza -la --icons --header --group-directories-first'

@@ -10,6 +10,8 @@ gnome-session
 google-chrome
 .gsd-keyboard.settings-ported
 gtk-3.0
+gtk-4.0
+kded6rc
 htop
 JetBrains
 lazygit

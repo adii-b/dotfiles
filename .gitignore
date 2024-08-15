@@ -81,6 +81,8 @@ systemmonitorrc
 filetypesrc
 plasma.emojierrc
 arkrc
+glib*
+zed
 kcalcrc
 ksystemlogrc
 kiorc
@@ -95,6 +97,7 @@ vivaldi
 goa*
 baloofileinformationrc
 konsolerc
+kscreen*
 konsolesshconfig
 xdg-desktop-portal-kderc
 spectaclerc

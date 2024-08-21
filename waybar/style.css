@@ -2,9 +2,9 @@
   border: none;
   border-radius: 0;
   min-height: 0;
-  font-family: 'JetBrainsMono Nerd Font';
-  font-size: 15px;
-  font-weight: 600;
+  font-family: 'FiraCode Nerd Font Ret';
+  font-size: 16px;
+  font-weight: 400;
 }
 
 window#waybar {

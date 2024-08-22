@@ -8,7 +8,7 @@
     fg-col2: rgba(243, 139, 168, 1.0);
     grey: rgba(108, 112, 134, 1.0);
     width: 550;
-    font: "FiraCode Nerd Font Ret 16";
+    font: "Monaco Nerd Font 16";
     border-radius: 15px;
 }
 

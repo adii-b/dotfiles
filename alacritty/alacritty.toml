@@ -2,6 +2,9 @@
 normal = { family = "Monaco Nerd Font", style = "" }
 size = 13
 
+[window]
+opacity = 0.9
+
 [cursor]
 style = { shape = "Beam", blinking = "On" }
 

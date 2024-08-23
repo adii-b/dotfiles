@@ -83,6 +83,10 @@ plasma.emojierrc
 arkrc
 glib*
 zed
+partitionmanagerrc
+chromium/
+ktorrent*
+kalendar*
 kcalcrc
 ksystemlogrc
 kiorc

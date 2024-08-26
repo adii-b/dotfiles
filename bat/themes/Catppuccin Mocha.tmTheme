@@ -72,8 +72,6 @@
         <dict>
           <key>foreground</key>
           <string>#6c7086</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -143,8 +141,6 @@
         <dict>
           <key>foreground</key>
           <string>#89b4fa</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -156,8 +152,6 @@
         <dict>
           <key>foreground</key>
           <string>#f9e2af</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -169,8 +163,6 @@
         <dict>
           <key>foreground</key>
           <string>#f9e2af</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -204,8 +196,6 @@
         <dict>
           <key>foreground</key>
           <string>#f9e2af</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -226,8 +216,6 @@
         <dict>
           <key>foreground</key>
           <string>#eba0ac</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -980,8 +968,6 @@
         <dict>
           <key>foreground</key>
           <string>#89b4fa</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -1004,8 +990,6 @@
         <dict>
           <key>foreground</key>
           <string>#94e2d5</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -1159,8 +1143,6 @@
         <dict>
           <key>foreground</key>
           <string>#f38ba8</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -1387,8 +1369,6 @@
         <dict>
           <key>foreground</key>
           <string>#89dceb</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -1400,8 +1380,6 @@
         <dict>
           <key>foreground</key>
           <string>#f38ba8</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -1457,8 +1435,6 @@
         <dict>
           <key>foreground</key>
           <string>#fab387</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -1514,8 +1490,6 @@
         <dict>
           <key>foreground</key>
           <string>#eba0ac</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -1527,8 +1501,6 @@
         <dict>
           <key>foreground</key>
           <string>#a6e3a1</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -1661,8 +1633,6 @@
         <dict>
           <key>foreground</key>
           <string>#f9e2af</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -1722,8 +1692,6 @@
         <dict>
           <key>foreground</key>
           <string>#f9e2af</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -1746,8 +1714,6 @@
         <dict>
           <key>foreground</key>
           <string>#f9e2af</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -1792,8 +1758,6 @@
         <dict>
           <key>foreground</key>
           <string>#89b4fa</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -1805,8 +1769,6 @@
         <dict>
           <key>foreground</key>
           <string>#89b4fa</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -1917,8 +1879,6 @@
         <dict>
           <key>foreground</key>
           <string>#f5c2e7</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -1930,8 +1890,6 @@
         <dict>
           <key>foreground</key>
           <string>#94e2d5</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -1954,8 +1912,6 @@
         <dict>
           <key>foreground</key>
           <string>#fab387</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>

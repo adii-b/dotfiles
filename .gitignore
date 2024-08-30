@@ -42,7 +42,6 @@ xsettingsd
 yay
 zoom*
 VirtualBox
-zed/.*
 Trolltech.conf
 baloofilerc
 dolphinrc
@@ -82,13 +81,14 @@ filetypesrc
 plasma.emojierrc
 arkrc
 glib*
-zed
 partitionmanagerrc
 chromium/
 ktorrent*
 kalendar*
 sqlops
 kfont*
+microsoft-edge/
+Electron
 kcalcrc
 ksystemlogrc
 kiorc

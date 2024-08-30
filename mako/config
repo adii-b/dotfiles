@@ -21,7 +21,7 @@ group-by=summary
 
 border-size=2
 border-radius=7
-font=MonacoLigaturized Nerd Font 13
+font=CaskaydiaCove Nerd Font 13
 icons=1
 icon-path=/usr/share/icons/Papirus-Dark
 max-icon-size=64

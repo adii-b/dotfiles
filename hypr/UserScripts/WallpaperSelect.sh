@@ -1,39 +1,54 @@
 #!/bin/bash
+#  ██╗    ██╗ █████╗ ██╗     ██╗     ██████╗  █████╗ ██████╗ ███████╗██████╗
+#  ██║    ██║██╔══██╗██║     ██║     ██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔══██╗
+#  ██║ █╗ ██║███████║██║     ██║     ██████╔╝███████║██████╔╝█████╗  ██████╔╝
+#  ██║███╗██║██╔══██║██║     ██║     ██╔═══╝ ██╔══██║██╔═══╝ ██╔══╝  ██╔══██╗
+#  ╚███╔███╔╝██║  ██║███████╗███████╗██║     ██║  ██║██║     ███████╗██║  ██║
+#   ╚══╝╚══╝ ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝     ╚═╝  ╚═╝╚═╝     ╚══════╝╚═╝  ╚═╝
+#
+#  ██╗      █████╗ ██╗   ██╗███╗   ██╗ ██████╗██╗  ██╗███████╗██████╗
+#  ██║     ██╔══██╗██║   ██║████╗  ██║██╔════╝██║  ██║██╔════╝██╔══██╗
+#  ██║     ███████║██║   ██║██╔██╗ ██║██║     ███████║█████╗  ██████╔╝
+#  ██║     ██╔══██║██║   ██║██║╚██╗██║██║     ██╔══██║██╔══╝  ██╔══██╗
+#  ███████╗██║  ██║╚██████╔╝██║ ╚████║╚██████╗██║  ██║███████╗██║  ██║
+#  ╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+#	originally written by: gh0stzk - https://github.com/gh0stzk/dotfiles
+#	rewritten for hyprland by :	 develcooking - https://github.com/develcooking/hyprland-dotfiles
+#	Info    - This script runs the rofi launcher, to select
+#             the wallpapers included in the theme you are in.
 
-# Directory where wallpapers are stored
-WALLPAPER_DIR=~/Pictures/wallpapers
+# Set some variables
+wall_dir="${HOME}/Pictures/wallpapers/"
+cacheDir="${HOME}/.cache/aditya/${theme}"
+rofi_command="rofi -dmenu -theme ${HOME}/.config/rofi/wallSelect.rasi -theme-str ${rofi_override}"
 
-# Get a list of valid wallpaper files
-FILES=$(find "$WALLPAPER_DIR" -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.gif" \) | sort)
-FILENAMES=$(echo "$FILES" | while read -r FILE; do basename "$FILE"; done)
-
-# Check if there are any files
-if [ -z "$FILENAMES" ]; then
-  echo "No wallpapers found."
-  exit 1
+# Create cache dir if not exists
+if [ ! -d "${cacheDir}" ]; then
+  mkdir -p "${cacheDir}"
 fi
 
-# Use rofi to select a file
-SELECTED_FILE=$(echo "$FILENAMES" | rofi -dmenu -i -p "Select Wallpaper:")
+physical_monitor_size=24
+monitor_res=$(hyprctl monitors | grep -A2 Monitor | head -n 2 | awk '{print $1}' | grep -oE '^[0-9]+')
+dotsperinch=$(echo "scale=2; $monitor_res / $physical_monitor_size" | bc | xargs printf "%.0f")
+monitor_res=$(($monitor_res * $physical_monitor_size / $dotsperinch))
 
-# Check if a file was selected
-if [ -z "$SELECTED_FILE" ]; then
-  echo "No wallpaper selected."
-  exit 1
-fi
+# rofi_override="element-icon{size:${monitor_res}px;border-radius:0px;}"
 
-# Find the full path of the selected file
-SELECTED_PATH=$(echo "$FILES" | while read -r FILE; do
-  if [ "$(basename "$FILE")" == "$SELECTED_FILE" ]; then
-    echo "$FILE"
-    break
+# Convert images in directory and save to cache dir
+for imagen in "$wall_dir"/*.{jpg,jpeg,png,webp}; do
+  if [ -f "$imagen" ]; then
+    nombre_archivo=$(basename "$imagen")
+    if [ ! -f "${cacheDir}/${nombre_archivo}" ]; then
+      convert -strip "$imagen" -thumbnail 500x500^ -gravity center -extent 500x500 "${cacheDir}/${nombre_archivo}"
+    fi
   fi
-done)
+done
 
-# Set the selected file as wallpaper
-swww img "$SELECTED_PATH" --transition-step 240 --transition-fps 60 --transition-type outer --transition-pos top-right
+# Select a picture with rofi
+wall_selection=$(find "${wall_dir}" -maxdepth 1 -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.webp" \) -exec basename {} \; | sort | while read -r A; do echo -en "$A\x00icon\x1f""${cacheDir}"/"$A\n"; done | $rofi_command)
 
-# Send a notification
-notify-send "Wallpaper Changed" "Wallpaper changed to $SELECTED_FILE."
+# Set the wallpaper
+[[ -n "$wall_selection" ]] || exit 1
+swww img ${wall_dir}/${wall_selection}
 
-echo "Wallpaper changed to $SELECTED_FILE."
+exit 0

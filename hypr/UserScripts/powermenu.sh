@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ############################################################################################################
 ##   ______  __      __  _______   ________  _______    ______   __    __   ______   __    __  ________   ##
 ##  /      \|  \    /  \|       \ |        \|       \  /      \ |  \  |  \ /      \ |  \  /  \|        \  ##
@@ -9,52 +11,43 @@
 ##  \$$    $$   | $$    | $$    $$| $$     \| $$  | $$ \$$    $$| $$  \$$$| $$  | $$| $$  \$$\| $$     \  ##
 ##   \$$$$$$     \$$     \$$$$$$$  \$$$$$$$$ \$$   \$$  \$$$$$$  \$$   \$$ \$$   \$$ \$$   \$$ \$$$$$$$$  ##
 ##                                                                                                        ##
-## Mako Config                                                                                            ##
+## Power Menu                                                                                       ##
 ## Created by Cybersnake                                                                                  ##
 ############################################################################################################
 
-# General
+DIR="$HOME/.config"
+rofi_cmd="rofi -theme $DIR/rofi/powermenu.rasi"
 
-icons=1
-markup=1
-actions=1
-width=300
-height=200
-sort=-time
-invisible=0
-group-by=none
-format=%s\n%b
-layer=overlay
-border-size=2
-max-visible=10
-margin=2,2,2,2
-outer-margin=15
-max-icon-size=42
-anchor=top-right
-border-radius=7
-ignore-timeout=0
-text-alignment=center
-default-timeout=3000
-on-button-left=dismiss-all
-font=JetBrainsMono Nerd Font  13
-icon-path=/usr/share/icons/Papirus-Dark/
+uptime=$(uptime -p | sed -e 's/up //g')
+#bat_health=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | rg capacity | awk '{print$2}')
 
+# Options
+Shutdown="󰐥 Shutdown"
+Reboot="󰦛 Reboot"
+Lock=" Lock"
+Suspend=" Suspend"
+Logout="󰍃 Logout"
 
-# Colors (Catppuccin Mocha)
+options="$Shutdown\n$Reboot\n$Lock\n$Suspend\n$Logout"
 
-background-color=#FF000000
-text-color=#cdd6f4
-border-color=#89b4fa
-progress-color=over #313244
+# Show menu
+chosen="$(echo -e "$options" | $rofi_cmd -p "Uptime <=> $uptime" -dmenu)"
 
-# Per-mode settings
-
-[mode=do-not-disturb]
-invisible=1
-on-notify=none
-
-[mode=silent]
-on-notify=none
-
-[urgency=high]
-border-color=#fab387
+# Command for specific choices
+case $chosen in
+"$Shutdown")
+  systemctl poweroff
+  ;;
+"$Reboot")
+  systemctl reboot
+  ;;
+"$Suspend")
+  systemctl suspend
+  ;;
+"$Lock")
+  hyprlock
+  ;;
+"$Logout")
+  hyprctl dispatch exit
+  ;;
+esac

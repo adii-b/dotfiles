@@ -40,7 +40,7 @@
     "format": "{id}",
     "show-special": false,
     "persistent-workspaces": {
-      "*": 0,
+      "*": 0
     }
   },
   "temperature": {
@@ -54,6 +54,7 @@
     "spacing": 2
   },
   "clock": {
+    "timezone": "Asia/Kolkata",
     "format": "<span>{:%I:%M %a %d}</span>",
     "tooltip-format": "{calendar}",
     "calendar": {
@@ -83,7 +84,7 @@
       "",
       "",
       ""
-    ],
+    ]
   },
   "custom/playerctl": {
     "format": "{icon}  <span>{}</span>",
@@ -101,7 +102,7 @@
   "cpu": {
     "format": "<span>󰯳</span> {usage}%",
     "interval": 1,
-    "on-click": "gnome-system-monitor"
+    "on-click": "plasma-systemmonitor"
   },
   "hyprland/window": {
     "format": "{title}",
@@ -149,7 +150,7 @@
       "default": [
         "",
         "",
-        "",
+        ""
       ]
     }
   },
@@ -165,7 +166,7 @@
     "format-disconnected": "Disconnected",
     "format-wifi": "  {essid}",
     "tooltip-format": " {signalStrength}",
-    "on-click": "wifimenu",
+    "on-click": "wifimenu"
   },
   "bluetooth": {
     "format": " {status}",
@@ -174,17 +175,17 @@
     "tooltip-format": "{device_alias}",
     "format-connected-battery": " {device_alias} {device_battery_percentage}%",
     "tooltip-format-enumerate-connected": "{device_alias}",
-    "on-click": "btblock",
+    "on-click": "btblock"
   },
   "memory": {
     "interval": 1,
     "format": " {used}G",
-    "tooltip-format": "{used} / {total} G",
+    "tooltip-format": "{used} / {total} G"
   },
   "disk": {
     "interval": 600,
     "format": " {percentage_used}%",
-    "tooltip-format": "{used} used out of {total} on {path} ",
+    "tooltip-format": "{used} used out of {total} on {path} "
   },
   "custom/updates": {
     "format": "{}",
@@ -207,6 +208,6 @@
     "interval": 5,
     "exec": "$HOME/.config/waybar/bin/playerinfo",
     "max-length": 40,
-    "tooltip": true,
-  },
+    "tooltip": true
+  }
 }

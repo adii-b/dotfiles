@@ -21,34 +21,34 @@ main() {
   choice=$(menu | rofi -dmenu -i -p "Select a file to edit:")
   case $choice in
   "View Env-variables")
-    kitty -e nvim "$UserConfigs/ENVariables.conf"
+    foot -e nvim "$UserConfigs/ENVariables.conf"
     ;;
   "View Window-Rules")
-    kitty -e nvim "$UserConfigs/WindowRules.conf"
+    foot -e nvim "$UserConfigs/WindowRules.conf"
     ;;
   "View Startup_Apps")
-    kitty -e nvim "$UserConfigs/Startup_Apps.conf"
+    foot -e nvim "$UserConfigs/Startup_Apps.conf"
     ;;
   "View User-Keybinds")
-    kitty -e nvim "$UserConfigs/UserKeybinds.conf"
+    foot -e nvim "$UserConfigs/UserKeybinds.conf"
     ;;
   "View Monitors")
-    kitty -e nvim "$UserConfigs/Monitors.conf"
+    foot -e nvim "$UserConfigs/Monitors.conf"
     ;;
   "View Laptop-Keybinds")
-    kitty -e nvim "$UserConfigs/Laptops.conf"
+    foot -e nvim "$UserConfigs/Laptops.conf"
     ;;
   "View User-Settings")
-    kitty -e nvim "$UserConfigs/UserSettings.conf"
+    foot -e nvim "$UserConfigs/UserSettings.conf"
     ;;
   "View Workspace-Rules")
-    kitty -e nvim "$UserConfigs/WorkspaceRules.conf"
+    foot -e nvim "$UserConfigs/WorkspaceRules.conf"
     ;;
   "View Default-Settings")
-    kitty -e nvim "$configs/Settings.conf"
+    foot -e nvim "$configs/Settings.conf"
     ;;
   "View Default-Keybinds")
-    kitty -e nvim "$configs/Keybinds.conf"
+    foot -e nvim "$configs/Keybinds.conf"
     ;;
   *) ;;
   esac

@@ -7,8 +7,8 @@
     fg-col: rgba(205, 214, 244, 1.0);
     fg-col2: rgba(243, 139, 168, 1.0);
     grey: rgba(108, 112, 134, 1.0);
-    width: 1850;
-    font: "JetBrainsMono Nerd Font 15";
+    width: 650;
+    font: "MonacoLigaturized Nerd Font 16";
     border-radius: 15px;
 }
 
@@ -17,8 +17,13 @@ element-text, element-icon , mode-switcher {
     text-color:       inherit;
 }
 
+element-text {
+    enabled: true;
+    margin: 80px 0px 0px 20px;
+}
+
 window {
-    height: 850;
+    height: 811;
     border: 3px;
     border-color: @border-col;
     background-color: @bg-col;
@@ -57,10 +62,10 @@ entry {
 
 listview {
     border: 0px 0px 0px;
-    padding: 6px 0px 0px;
-    margin: 10px 0px 0px 20px;
-    columns: 5;
-    lines: 2;
+    padding: 0px 0px 0px;
+    margin: 20px 17px 20px 17px;
+    columns: 1;
+    lines: 3;
     background-color: @bg-col;
 }
 
@@ -71,12 +76,13 @@ element {
 }
 
 element-icon {
-    size: 335px;
+    size: 200px;
 }
 
+
 element selected {
-    background-color:  #F28AA4 ;
-    text-color: @fg-col2  ;
+    background-color:  #CDD6F4 ;
+    text-color: #25293B  ;
 }
 
 mode-switcher {

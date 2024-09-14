@@ -99,6 +99,12 @@
       "Paused": "<span></span>"
     }
   },
+  "custom/timedate": {
+    "format": "{output}",
+    "exec": "date '+%a %b %d, %I:%M %p'",
+    "interval": 1,
+    "return-type": "json"
+  },
   "cpu": {
     "format": "<span>󰯳</span> {usage}%",
     "interval": 1,

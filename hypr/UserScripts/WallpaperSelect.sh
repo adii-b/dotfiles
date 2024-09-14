@@ -20,7 +20,6 @@
 # Set some variables
 wall_dir="${HOME}/Pictures/wallpapers/"
 cacheDir="${HOME}/.cache/aditya/${theme}"
-rofi_command="rofi -dmenu -theme ${HOME}/.config/rofi/wallSelect.rasi -theme-str ${rofi_override}"
 
 # Create cache dir if not exists
 if [ ! -d "${cacheDir}" ]; then
@@ -45,7 +44,7 @@ for imagen in "$wall_dir"/*.{jpg,jpeg,png,webp}; do
 done
 
 # Select a picture with rofi
-wall_selection=$(find "${wall_dir}" -maxdepth 1 -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.webp" \) -exec basename {} \; | sort | while read -r A; do echo -en "$A\x00icon\x1f""${cacheDir}"/"$A\n"; done | $rofi_command)
+wall_selection=$(find "${wall_dir}" -maxdepth 1 -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.webp" \) -exec basename {} \; | sort | while read -r A; do echo -en "$A\x00icon\x1f""${cacheDir}"/"$A\n"; done | rofi -dmenu -theme ~/.config/rofi/wallSelect.rasi -p "Select Wallpaper")
 
 # Set the wallpaper
 [[ -n "$wall_selection" ]] || exit 1

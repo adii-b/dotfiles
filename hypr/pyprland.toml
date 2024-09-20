@@ -4,6 +4,6 @@ plugins = ["scratchpads", "magnify"]
 
 [scratchpads.term]
 animation = "fromTop"
-command = "foot --class foot-dropterm"
-class = "alacritty-dropterm"
+command = "kitty --class kitty-dropterm"
+class = "kitty-dropterm"
 size = "75% 60%"

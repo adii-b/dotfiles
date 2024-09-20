@@ -1,0 +1,29 @@
+font_family CaskaydiaCove Nerd Font
+font_size 13
+
+cursor_shape beam
+
+modify_font cell_height 3px
+
+background_opacity 1.0
+
+
+enabled_layouts splits
+# Create a new window splitting the space used by the existing one so that
+# the two windows are placed one above the other
+map f5 launch --location=hsplit
+
+# Create a new window splitting the space used by the existing one so that
+# the two windows are placed side by side
+map f6 launch --location=vsplit
+
+
+map shift+up move_window up
+map shift+left move_window left
+map shift+right move_window right
+map shift+down move_window down
+
+# BEGIN_KITTY_THEME
+# Doom One
+include current-theme.conf
+# END_KITTY_THEME

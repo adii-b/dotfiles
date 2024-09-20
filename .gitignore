@@ -84,6 +84,8 @@ glib*
 partitionmanagerrc
 chromium/
 ktorrent*
+nautilus
+ibus
 kalendar*
 sqlops
 kfont*

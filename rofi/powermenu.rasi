@@ -7,8 +7,8 @@
     fg-col: rgba(205, 214, 244, 1.0);
     fg-col2: rgba(243, 139, 168, 1.0);
     grey: rgba(108, 112, 134, 1.0);
-    width: 1000;
-    font: "JetBrainsMono Nerd Font 17";
+    width: 350;
+    font: "CommitMono Nerd Font 15";
     border-radius: 15px;
 }
 
@@ -18,7 +18,7 @@ element-text, element-icon , mode-switcher {
 }
 
 window {
-    height: 150;
+    height: 350;
     border: 3px;
     border-color: @border-col;
     background-color: @bg-col;
@@ -29,7 +29,8 @@ mainbox {
 }
 
 inputbar {
-    children: [prompt,entry];
+    enabled: true;
+    children: [prompt];
     background-color: @bg-col;
     border-radius: 5px;
     padding: 2px;
@@ -37,20 +38,21 @@ inputbar {
 
 prompt {
     background-color: @blue;
-    padding: 6px;
+    padding: 16px;
     text-color: @bg-col;
     border-radius: 3px;
-    margin: 20px 0px 0px 20px;
+    margin: 20px 0px 0px 28px;
 }
 
 textbox-prompt-colon {
-    expand: false;
+    expand: true;
     str: ":";
 }
 
 entry {
+    enabled: false;
     padding: 6px;
-    margin: 20px 0px 0px 10px;
+    margin: 0px 0px 0px 0px;
     text-color: @fg-col;
     background-color: @bg-col;
 }
@@ -58,7 +60,7 @@ entry {
 listview {
     border: 0px 0px 0px;
     padding: 6px 0px 0px;
-    margin: 10px 0px 0px 20px;
+    margin: 10px 0px 0px 65px;
     columns: 5;
     lines: 1;
     background-color: @bg-col;

@@ -188,7 +188,7 @@
     "tooltip-format": "{used} / {total} G"
   },
   "disk": {
-    "interval": 600,
+    "interval": 100,
     "format": " {percentage_used}%",
     "tooltip-format": "{used} used out of {total} on {path} "
   },

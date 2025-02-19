@@ -7,12 +7,26 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+  "icon_theme": "Catppuccin Mocha",
+  "assistant": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4o"
+    },
+    "version": "2"
+  },
+  "features": {
+    "edit_prediction_provider": "none"
+  },
+  "base_keymap": "VSCode",
   "ui_font_size": 16,
-  "ui_font_family": "CaskaydiaCove Nerd Font",
-  "buffer_font_family": "CaskaydiaCove Nerd Font",
-  "buffer_font_size": 20,
+  "ui_font_family": "Droid Sans Mono",
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "current_line_highlight": "none",
+  "buffer_font_size": 19,
+  "format_on_save": "on",
   "terminal": {
-    "font_family": "CaskaydiaCove Nerd Font",
+    "font_family": "JetBrainsMono Nerd Font",
     "font_size": 17
   },
   "theme": {
@@ -22,6 +36,9 @@
   },
   "languages": {
     "C++": {
+      "format_on_save": "language_server"
+    },
+    "Java": {
       "format_on_save": "language_server"
     }
   }

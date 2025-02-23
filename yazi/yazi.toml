@@ -1,7 +1,7 @@
 [manager]
 show_hidden = true
 sort_by = "size"
-linemode = "size"
+# linemode = "size"
 show_symlink = true
 
 [preview]

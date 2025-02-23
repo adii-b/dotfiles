@@ -7,11 +7,3 @@ animation = "fromTop"
 command = "kitty --class kitty-dropterm"
 class = "kitty-dropterm"
 size = "75% 60%"
-
-[scratchpads.obs]
-animation = "fromTop"
-command = "obsidian"
-class = "obsidian"
-lazy = true
-size = "75% 75%"
-excludes = "*"

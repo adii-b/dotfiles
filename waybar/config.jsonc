@@ -54,7 +54,7 @@
   },
   "clock": {
     "timezone": "Asia/Kolkata",
-    "format": "<span>{:%I:%M %a %d}</span>",
+    "format": "<span>{:%H:%M %a %B %d %Y}</span>",
     "tooltip-format": "{calendar}",
     "calendar": {
       "mode": "month",

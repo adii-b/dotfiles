@@ -8,7 +8,7 @@
     fg-col2: rgba(243, 139, 168, 1.0);
     grey: rgba(108, 112, 134, 1.0);
     width: 550;
-    font: "MonacoLigaturized Nerd Font 15";
+    font: "CartographCF Nerd Font 15";
     border-radius: 15px;
 }
 

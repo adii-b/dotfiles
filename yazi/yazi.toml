@@ -1,6 +1,6 @@
 [manager]
 show_hidden = true
-sort_by = "size"
+sort_by = "btime"
 # linemode = "size"
 show_symlink = true
 

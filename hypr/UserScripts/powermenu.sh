@@ -18,7 +18,7 @@
 DIR="$HOME/.config"
 rofi_cmd="rofi -theme $DIR/rofi/powermenu.rasi"
 
-uptime=$(awk -F'[ ,:]+' '/up/ {min=0; for(i=2; i<=NF; i++) {if ($(i) ~ /hour/) min += $(i-1)*60; if ($(i) ~ /minute/) min += $(i-1);} print min " minutes"}' <<< "$(uptime -p)")
+uptime=$(awk -F'[ ,:]+' '/up/ {min=0; for(i=2; i<=NF; i++) {if ($(i) ~ /hour/) min += $(i-1)*60; if ($(i) ~ /minute/) min += $(i-1);} print min " minutes"}' <<<"$(uptime -p)")
 
 # bat_health=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | rg capacity | awk '{print$2}')
 
@@ -49,6 +49,6 @@ case $chosen in
   hyprlock
   ;;
 "$Logout")
-  hyprctl dispatch exit
+  hyprctl dispatch exit 0
   ;;
 esac

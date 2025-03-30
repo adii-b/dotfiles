@@ -107,7 +107,7 @@
   "cpu": {
     "format": "<span>󰯳</span> {usage}%",
     "interval": 1,
-    "on-click": "plasma-systemmonitor"
+    "on-click": "xfce4-taskmanager"
   },
   "hyprland/window": {
     "format": "{title}",

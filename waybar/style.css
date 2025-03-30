@@ -44,6 +44,11 @@ window#waybar {
   transition-property: background-color;
   transition-duration: 0.5s;
 }
+
+#window {
+  background-color: #f38ba8;
+  color: #1e1e2e;
+}
 #window,
 #clock,
 #battery,
@@ -61,7 +66,6 @@ window#waybar {
 #temperature,
 #custom-playerctl,
 #backlight {
-    background: #000000;
     opacity: 1.0;
     padding: 1.5px 7px 1.5px 7px;
     margin-top: 5px;
@@ -72,6 +76,7 @@ window#waybar {
 }
 
 #tray {
+    background-color: #11111b;
     border-radius: 7px;
     margin-right: 7px;
 }
@@ -91,7 +96,7 @@ window#waybar {
   margin: 6px 3px;
   border-radius: 20px;
   background-color: #000000;
-  color: #cdd6f4;
+  color: #b4befe;
 }
 
 #workspaces button.active {
@@ -113,11 +118,13 @@ window#waybar {
 
 
 #cpu {
-  color: #89B4FA;
+  background-color: #94e2d5;
+  color: #1e1e2e;
 }
 
 #temperature {
-  color: #CBA6F7;
+  background-color: #74c7ec;
+  color: #1e1e2e;
 }
 
 #window {
@@ -127,15 +134,14 @@ window#waybar {
 }
 
 #clock {
-    color: #74c7ec;
+    background-color: #fab387;
+    color: #1e1e2e;
     border-radius: 7px 7px 7px 7px;
     margin-right: 3px;
     margin-left: 3px;
 }
 
-#window {
-  color: #94e2d5;
-}
+
 
 window#waybar.empty #window {
 	background-color: transparent;
@@ -181,13 +187,15 @@ window#waybar.empty #window {
 }
 
 #memory {
-    color: #89b4fa;
+    background-color: #f9e2af;
+    color: #1e1e2e;
     border-radius: 7px 7px 7px 7px;
     margin-left: 5px;
 }
 
 #disk {
-    color: #f9e2af;
+    background-color: #b4befe;
+    color: #1e1e2e;
     border-radius: 7px 7px 7px 7px;
     margin-left: 5px;
 }
@@ -201,19 +209,21 @@ window#waybar.empty #window {
 } 
 
 #pulseaudio {
-  color: #89b4fa;
+  background-color: #89dceb;
+  color: #1e1e2e;
   border-radius: 7px 0px 0px 7px;
   margin-right: 0px;
 }
 
 #pulseaudio.microphone {
-    color: #cba6f7;
+    color: #1e1e2e;
     border-radius: 0px 7px 7px 0px;
     margin-left: 0px;
 }
 
 #battery {
-    color: #a6e3a1;
+    background-color: #a6e3a1;
+    color: #1e1e2e;
     border-radius: 7px 7px 7px 7px;
     margin-right: 5px;
     margin-left: 5px;

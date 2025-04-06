@@ -7,23 +7,46 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+  "git_panel": {
+    "dock": "right"
+  },
+  "chat_panel": {
+    "dock": "right"
+  },
+  "project_panel": {
+    "dock": "right",
+    "auto_fold_dirs": false
+  },
+  "notification_panel": {
+    "dock": "right"
+  },
+  "collaboration_panel": {
+    "dock": "right"
+  },
+  "outline_panel": {
+    "dock": "right"
+  },
   "icon_theme": "Catppuccin Mocha",
   "assistant": {
+    "dock": "left",
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-3-7-sonnet-latest"
     },
     "version": "2"
   },
-  "features": {
-    "edit_prediction_provider": "zed"
+  "edit_predictions": {
+    "mode": "subtle"
   },
+  // "features": {
+  //   "edit_prediction_provider": "zed"
+  // },
   "base_keymap": "VSCode",
   "ui_font_size": 16,
   "ui_font_family": "CartographCF Nerd Font",
   "buffer_font_family": "CartographCF Nerd Font",
-  "current_line_highlight": "none",
-  "buffer_font_size": 19,
+  "current_line_highlight": "gutter",
+  "buffer_font_size": 18,
   "format_on_save": "on",
   "terminal": {
     "font_family": "CartographCF Nerd Font",
@@ -32,16 +55,22 @@
     "cursor_blink": true
   },
   "theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "Catppuccin Mocha - No Italics",
-    "dark": "Catppuccin Mocha"
+    "dark": "Catppuccin Mocha - No Italics"
   },
   "languages": {
     "C++": {
       "format_on_save": "language_server"
     },
-    "Java": {
+    "Python": {
       "format_on_save": "language_server"
+    },
+    "TypeScript": {
+      "format_on_save": "prettier"
+    },
+    "JavaScript": {
+      "format_on_save": "prettier"
     }
   }
 }

@@ -43,13 +43,13 @@
   // },
   "base_keymap": "VSCode",
   "ui_font_size": 16,
-  "ui_font_family": "CartographCF Nerd Font",
-  "buffer_font_family": "CartographCF Nerd Font",
+  "ui_font_family": "MonacoLigaturized Nerd Font",
+  "buffer_font_family": "MonacoLigaturized Nerd Font",
   "current_line_highlight": "gutter",
   "buffer_font_size": 18,
   "format_on_save": "on",
   "terminal": {
-    "font_family": "CartographCF Nerd Font",
+    "font_family": "MonacoLigaturized Nerd Font",
     "font_size": 17,
     "cursor_shape": "bar",
     "cursor_blink": true

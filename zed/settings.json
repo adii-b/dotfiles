@@ -60,17 +60,39 @@
     "dark": "Catppuccin Mocha - No Italics"
   },
   "languages": {
+    "HTML": {
+      "formatter": "prettier",
+      "format_on_save": "on",
+      "language_servers": ["angular", "vscode-html-language-server"]
+    },
     "C++": {
       "format_on_save": "language_server"
     },
     "Python": {
-      "format_on_save": "language_server"
+      "language_servers": ["pyright", "ruff"],
+      "formatter": [
+        {
+          "code_actions": {
+            "source.organizeImports.ruff": true,
+            "source.fixAll.ruff": true
+          }
+        },
+        {
+          "language_server": {
+            "name": "ruff"
+          }
+        }
+      ],
+      "format_on_save": "on"
     },
     "TypeScript": {
-      "format_on_save": "prettier"
+      "formatter": "prettier",
+      "language_servers": ["angular", "vtsls"],
+      "format_on_save": "on"
     },
     "JavaScript": {
-      "format_on_save": "prettier"
+      "formatter": "prettier",
+      "format_on_save": "on"
     }
   }
 }

@@ -4,8 +4,8 @@ plugins = ["scratchpads", "magnify"]
 
 [scratchpads.term]
 animation = "fromTop"
-command = "foot -a foot-dropterm"
-class = "foot-dropterm"
+command = "alacritty --class alacritty-dropterm"
+class = "alacritty-dropterm"
 size = "75% 60%"
 
 [scratchpads.editor]

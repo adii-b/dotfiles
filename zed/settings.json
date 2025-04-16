@@ -43,13 +43,16 @@
   // },
   "base_keymap": "VSCode",
   "ui_font_size": 16,
-  "ui_font_family": "MonacoLigaturized Nerd Font",
-  "buffer_font_family": "MonacoLigaturized Nerd Font",
+  "ui_font_family": "Cartograph CF",
+  "buffer_font_family": "Hasklug Nerd Font",
+  "buffer_font_features": {
+    "liga": true
+  },
   "current_line_highlight": "gutter",
   "buffer_font_size": 18,
   "format_on_save": "on",
   "terminal": {
-    "font_family": "MonacoLigaturized Nerd Font",
+    "font_family": "Cartograph CF",
     "font_size": 17,
     "cursor_shape": "bar",
     "cursor_blink": true
@@ -62,11 +65,7 @@
   "languages": {
     "HTML": {
       "formatter": "prettier",
-      "format_on_save": "on",
-      "language_servers": ["angular", "vscode-html-language-server"]
-    },
-    "C++": {
-      "format_on_save": "language_server"
+      "format_on_save": "on"
     },
     "Python": {
       "language_servers": ["pyright", "ruff"],
@@ -87,7 +86,6 @@
     },
     "TypeScript": {
       "formatter": "prettier",
-      "language_servers": ["angular", "vtsls"],
       "format_on_save": "on"
     },
     "JavaScript": {

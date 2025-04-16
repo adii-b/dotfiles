@@ -4,12 +4,12 @@ plugins = ["scratchpads", "magnify"]
 
 [scratchpads.term]
 animation = "fromTop"
-command = "kitty --class kitty-dropterm"
-class = "kitty-dropterm"
+command = "foot -a foot-dropterm"
+class = "foot-dropterm"
 size = "75% 60%"
 
 [scratchpads.editor]
 animation = "fromLeft"
 command = "mousepad"
-class = "mousepad"
+class = "mousepad-scratchpad"
 size = "40% 75%"

@@ -6,7 +6,7 @@ return {
     config = function()
       require("catppuccin").setup({
         flavour = "mocha", -- or "latte", "frappe", "macchiato"
-        no_italic = true, -- Disable italics globally
+        no_italic = false, -- Disable italics globally
       })
     end,
   },

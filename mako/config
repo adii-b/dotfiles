@@ -36,7 +36,7 @@ ignore-timeout=0
 text-alignment=center
 default-timeout=3000
 on-button-left=dismiss-all
-font=Cartograph CF 13
+font=Input Mono 13
 icon-path=/usr/share/icons/Papirus-Dark/
 
 

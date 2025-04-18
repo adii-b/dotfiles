@@ -8,7 +8,7 @@
     fg-col2: rgba(243, 139, 168, 1.0);
     grey: rgba(108, 112, 134, 1.0);
     width: 350;
-    font: "MonoLisa 15";
+    font: "Maple Mono 15";
     border-radius: 15px;
 }
 
@@ -41,7 +41,7 @@ prompt {
     padding: 16px;
     text-color: @bg-col;
     border-radius: 3px;
-    margin: 20px 0px 0px 18px;
+    margin: 20px 0px 0px 28px;
 }
 
 textbox-prompt-colon {

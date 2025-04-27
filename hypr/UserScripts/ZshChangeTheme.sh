@@ -13,7 +13,7 @@ if [ -z "$THEMES" ]; then
 fi
 
 # Use rofi to select a theme
-SELECTED_THEME=$(echo "$THEMES" | rofi -dmenu -i -p "Select Zsh Theme:")
+SELECTED_THEME=$(echo "$THEMES" | rofi -dmenu -i -theme ~/.config/rofi/launchers/type-6/style-1.rasi -p "Select Zsh Theme:")
 
 # Check if a theme was selected
 if [ -z "$SELECTED_THEME" ]; then

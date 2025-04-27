@@ -1,39 +1,32 @@
-//############################################################################################################
-//##   ______  __      __  _______   ________  _______    ______   __    __   ______   __    __  ________   ##
-//##  /      \|  \    /  \|       \ |        \|       \  /      \ |  \  |  \ /      \ |  \  /  \|        \  ##
-//## |  $$$$$$\\$$\  /  $$| $$$$$$$\| $$$$$$$$| $$$$$$$\|  $$$$$$\| $$\ | $$|  $$$$$$\| $$ /  $$| $$$$$$$$  ##
-//## | $$   \$$ \$$\/  $$ | $$__/ $$| $$__    | $$__| $$| $$___\$$| $$$\| $$| $$__| $$| $$/  $$ | $$__      ##
-//## | $$        \$$  $$  | $$    $$| $$  \   | $$    $$ \$$    \ | $$$$\ $$| $$    $$| $$  $$  | $$  \     ##
-//## | $$   __    \$$$$   | $$$$$$$\| $$$$$   | $$$$$$$\ _\$$$$$$\| $$\$$ $$| $$$$$$$$| $$$$$\  | $$$$$     ##
-//## | $$__/  \   | $$    | $$__/ $$| $$_____ | $$  | $$|  \__| $$| $$ \$$$$| $$  | $$| $$ \$$\ | $$_____   ##
-//##  \$$    $$   | $$    | $$    $$| $$     \| $$  | $$ \$$    $$| $$  \$$$| $$  | $$| $$  \$$\| $$     \  ##
-//##   \$$$$$$     \$$     \$$$$$$$  \$$$$$$$$ \$$   \$$  \$$$$$$  \$$   \$$ \$$   \$$ \$$   \$$ \$$$$$$$$  ##
-//##                                                                                                        ##
-//## Waybar Config                                                                                          ##
-//## Created by Cybersnake                                                                                  ##
-//############################################################################################################
 {
   "layer": "top",
   "position": "top",
-  "height": 42,
   "modules-left": [
-    "cpu",
+    "custom/launcher",
     "temperature",
     "memory",
-    "disk",
-    "hyprland/window"
+    "pulseaudio",
+    "battery",
+    "cpu",
+    "disk"
+    //"mpd",
   ],
-  "fixed-center": true,
   "modules-center": [
     "hyprland/workspaces"
   ],
   "modules-right": [
     "tray",
-    "pulseaudio",
-    "pulseaudio#microphone",
-    "battery",
-    "clock"
+    "clock",
+    "custom/powermenu"
   ],
+  "custom/launcher": {
+    "format": "󰣇",
+    "on-click": "sleep 0.1 && /home/aditya/.config/hypr/UserScripts/launcher.sh"
+  },
+  "custom/cava-internal": {
+    "exec": "~/.config/waybar/Cava.sh",
+    "tooltip": false
+  },
   "hyprland/workspaces": {
     "sort-by-name": true,
     "format": "{id}",
@@ -42,177 +35,147 @@
       "*": 0
     }
   },
-  "temperature": {
-    "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
-    "critical-threshold": 80,
-    "format": "<span></span> {temperatureC}°C",
-    "interval": 1
-  },
-  "tray": {
-    "icon-size": 20,
-    "spacing": 2
-  },
-  "clock": {
-    "timezone": "Asia/Kolkata",
-    "format": "<span>{:%H:%M %a %B %d %Y}</span>",
-    "tooltip-format": "{calendar}",
-    "calendar": {
-      "mode": "month",
-      "mode-mon-col": 3,
-      "on-scroll": 1,
-      "on-click-right": "mode",
-      "format": {
-        "months": "<span color='#cdd6f4'><b>{}</b></span>",
-        "days": "<span color='#CDD6F4'><b>{}</b></span>",
-        "weeks": "<span color='#99ffdd'><b>{%W}</b></span>",
-        "weekdays": "<span color='#F9E2AF'><b>{}</b></span>",
-        "today": "<span color='#ff6699'><b>{}</b></span>"
-      }
-    },
-    "actions": {
-      "on-click-middle": "mode",
-      "on-click-right": "shift_up",
-      "on-click": "shift_down"
-    }
-    /*"format-alt": "<span foreground='#89dceb'> </span><span>{:%H:%M}</span>"*/
-  },
-  "backlight": {
-    "device": "intel_backlight",
-    "format": "{icon} {percent}%",
-    "format-icons": [
-      "",
-      "",
-      ""
-    ]
-  },
-  "custom/playerctl": {
-    "format": "{icon}  <span>{}</span>",
-    "return-type": "json",
-    "max-length": 20,
-    "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} ~ {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
-    "on-click-middle": "playerctl play-pause",
-    "on-click": "playerctl previous",
-    "on-click-right": "playerctl next",
-    "format-icons": {
-      "Playing": "<span></span>",
-      "Paused": "<span></span>"
-    }
-  },
-  "custom/timedate": {
-    "format": "{output}",
-    "exec": "date '+%a %b %d, %I:%M %p'",
-    "interval": 1,
-    "return-type": "json"
-  },
-  "cpu": {
-    "format": "<span>󰯳</span> {usage}%",
-    "interval": 1,
-    "on-click": "xfce4-taskmanager"
-  },
-  "hyprland/window": {
-    "format": "{title}",
-    "max-length": 30,
-    "seperate-outputs": true
-  },
-  "battery": {
-    "interval": 5,
-    "states": {
-      "good": 100,
-      "warning": 30,
-      "critical": 20
-    },
-    "format": "{icon} {capacity}%",
-    "format-charging": " {capacity}%",
-    "format-plugged": " {capacity}%",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
-    ]
+  "disk": {
+    "interval": 30,
+    "format": " {used}",
+    "path": "/home",
+    "tooltip": true,
+    "on-click": "sleep 0.1 && kitty gdu",
+    "tooltip-format": "{used}/{total} => {path} {percentage_used}%"
   },
   "pulseaudio": {
+    "scroll-step": 1,
     "format": "{icon} {volume}%",
-    "tooltip": false,
-    "format-muted": " Muted",
-    "on-click": "wpctl set-mute @DEFAULT_SINK@ toggle",
-    "on-scroll-up": "wpctl set-volume @DEFAULT_SINK@ 10%+",
-    "on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 10%-",
+    "format-muted": "󪤑 Muted",
     "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
       "default": [
         "",
         "",
-        ""
+        "󰕾"
       ]
+    },
+    /* "states": { */
+    /*   "warning": 100, */
+    /* }, */
+    "scroll-step": 1,
+    "on-click": "sleep 0.1 && pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "tooltip": false
+  },
+  "battery": {
+    "interval": 10,
+    "states": {
+      "warning": 20,
+      "critical": 10
+    },
+    "format": "{icon} {capacity}%",
+    "format-icons": [
+      "󰂎",
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󱟢"
+    ],
+    "format-full": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "tooltip": true,
+    "on-click-middle": "echo 0 > /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode",
+    "on-click-right": "echo 1 > /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode"
+  },
+  "clock": {
+    "interval": 1,
+    "format": "<span foreground='#9ECE6A'> </span>{:%I:%M %p %A %b %d}",
+    "tooltip": true,
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "calendar": {
+      "format": {
+        "months": "<span color='#BB9AF7'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+      }
     }
   },
-  "pulseaudio#microphone": {
-    "format": "{format_source}",
-    "format-source": " {volume}%",
-    "format-source-muted": "  Muted",
-    "on-click": "wpctl set-mute @DEFAULT_SOURCE@ toggle",
-    "on-scroll-up": "wpctl set-volume @DEFAULT_SOURCE@ 5%+",
-    "on-scroll-down": "wpctl set-volume @DEFAULT_SOURCE@ 5%-",
+  "memory": {
+    "on-click": "sleep 0.1 && kitty btop",
+    "interval": 1,
+    "format": "  {used} GiB",
+    "states": {
+      "warning": 85
+    }
+  },
+  "cpu": {
+    "interval": 1,
+    "format": "󰻠 {usage}%"
+  },
+  "mpd": {
+    "max-length": 25,
+    "format": "<span foreground='#bb9af7'></span> {title}",
+    "format-paused": " {title}",
+    "format-stopped": "<span foreground='#bb9af7'></span>",
+    "format-disconnected": "",
+    "on-click": "mpc --quiet toggle",
+    "on-click-right": "mpc ls | mpc add",
+    "on-click-middle": "kitty ncmpcpp",
+    "on-scroll-up": "mpc --quiet prev",
+    "on-scroll-down": "mpc --quiet next",
+    "smooth-scrolling-threshold": 5,
+    "tooltip-format": "{title} - {artist} ({elapsedTime:%M:%S}/{totalTime:%H:%M:%S})"
   },
   "network": {
-    "format-disconnected": "Disconnected",
-    "format-wifi": "  {essid}",
-    "tooltip-format": " {signalStrength}",
-    "on-click": "wifimenu"
-  },
-  "bluetooth": {
-    "format": " {status}",
-    "format-disabled": " {status}",
-    "format-connected": " {num_connections}",
-    "tooltip-format": "{device_alias}",
-    "format-connected-battery": " {device_alias} {device_battery_percentage}%",
-    "tooltip-format-enumerate-connected": "{device_alias}",
-    "on-click": "btblock"
-  },
-  "memory": {
     "interval": 1,
-    "format": " {used}G",
-    "tooltip-format": "{used} / {total} G"
+    "format-wifi": "󰖩 {essid}",
+    "format-ethernet": "󰈀  {ifname} ({ipaddr})",
+    "format-linked": "󪤅 {essid} (No IP)",
+    "format-disconnected": "󰖪 Disconnected",
+    "on-click": "sleep 0.1 && kitty nmtui",
+    "tooltip": true
   },
-  "disk": {
-    "interval": 100,
-    "format": " {percentage_used}%",
-    "tooltip-format": "{used} used out of {total} on {path} "
+  "temperature": {
+    "interval": 1,
+    "hwmon-path": "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon5/temp1_input",
+    "critical-threshold": 80,
+    "tooltip": false,
+    "format": " {temperatureC}°C"
   },
-  "custom/updates": {
-    "format": "{}",
-    "interval": 1200,
-    "exec": "$HOME/.config/waybar/bin/updatecheck",
+  "custom/powermenu": {
+    "format": "",
+    "on-click": "sleep 0.1 && /home/aditya/.config/hypr/UserScripts/powermenu.sh",
+    "tooltip": false
+  },
+  "tray": {
+    "icon-size": 15,
+    "spacing": 5
+  },
+  "custom/pacman": {
+    "format": "{icon} {}",
     "return-type": "json",
-    "exec-if": "exit 0",
-    "signal": 8
+    "format-icons": {
+      "has-updates": "󪤱",
+      "updated": "󪥛"
+    },
+    "exec": "waybar-module-pacman-updates",
+    "on-click": "sleep 0.1 && update-notifier"
   },
-  "custom/notifications": {
+  "custom/weather": {
+    "format": "{}°",
+    "tooltip": true,
+    "interval": 3600,
+    "exec": "wttrbar --location Adelaide",
+    "return-type": "json"
+  },
+  "custom/recording": {
+    "exec": "$XDG_CONFIG_HOME/waybar/scripts/recording.sh status",
     "format": "{}",
-    "exec": "$HOME/.config/waybar/bin/not-dnd -j",
-    "on-click": "$HOME/.config/waybar/bin/not-dnd",
+    "on-click": "$XDG_CONFIG_HOME/waybar/scripts/recording.sh toggle fullscreen",
+    "on-click-right": "$XDG_CONFIG_HOME/waybar/scripts/recording.sh toggle region",
+    "restart-interval": 1,
     "return-type": "json",
-    "interval": "once",
-    "signal": 2
-  },
-  "custom/player": {
-    "format": "󰎆 {}",
-    "interval": 5,
-    "exec": "$HOME/.config/waybar/bin/playerinfo",
-    "max-length": 40,
     "tooltip": true
   }
 }

@@ -26,7 +26,7 @@
   "outline_panel": {
     "dock": "right"
   },
-  "icon_theme": "Catppuccin Mocha",
+  "icon_theme": "Material Icon Theme",
   "assistant": {
     "dock": "left",
     "default_model": {
@@ -43,8 +43,8 @@
   // },
   "base_keymap": "VSCode",
   "ui_font_size": 16,
-  "ui_font_family": "Cartograph CF",
-  "buffer_font_family": "Hasklug Nerd Font",
+  "ui_font_family": "Maple Mono",
+  "buffer_font_family": "Maple Mono",
   "buffer_font_features": {
     "liga": true
   },
@@ -52,20 +52,21 @@
   "buffer_font_size": 18,
   "format_on_save": "on",
   "terminal": {
-    "font_family": "Cartograph CF",
+    "font_family": "Maple Mono",
     "font_size": 17,
     "cursor_shape": "bar",
     "cursor_blink": true
   },
   "theme": {
     "mode": "dark",
-    "light": "Catppuccin Mocha - No Italics",
-    "dark": "Catppuccin Mocha - No Italics"
+    "light": "Tokyo Night",
+    "dark": "Tokyo Night"
   },
   "languages": {
     "HTML": {
       "formatter": "prettier",
-      "format_on_save": "on"
+      "format_on_save": "on",
+      "language_servers": ["angular", "html"]
     },
     "Python": {
       "language_servers": ["pyright", "ruff"],
@@ -86,7 +87,8 @@
     },
     "TypeScript": {
       "formatter": "prettier",
-      "format_on_save": "on"
+      "format_on_save": "on",
+      "language_servers": ["angular", "ts_ls"]
     },
     "JavaScript": {
       "formatter": "prettier",

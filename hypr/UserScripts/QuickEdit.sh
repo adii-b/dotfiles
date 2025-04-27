@@ -18,7 +18,7 @@ menu() {
 }
 
 main() {
-  choice=$(menu | rofi -dmenu -i -p "Select a file to edit:")
+  choice=$(menu | rofi -dmenu -i -theme ~/.config/rofi/launchers/type-6/style-1.rasi -p "Select a file to edit:")
   case $choice in
   "View Env-variables")
     kitty -e nvim "$UserConfigs/ENVariables.conf"

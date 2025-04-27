@@ -120,6 +120,7 @@ gnome-autoar
 gnome-desktop-4
 gnome-desktop-common
 gnome-keyring
+gnome-themes-extra
 gnulib-l10n
 gnupg
 gnutls
@@ -170,14 +171,14 @@ hyprwayland-scanner
 iana-etc
 icu
 imagemagick
-imath
+imv
+inetutils
 iniparser
 iproute2
 iptables-nft
 iputils
 iso-codes
 jansson
-jasper
 jbigkit
 jemalloc
 jq
@@ -193,6 +194,7 @@ kmod
 krb5
 l-smash
 lame
+lazygit
 lcms2
 leancrypto
 less
@@ -204,7 +206,6 @@ libassuan
 libasyncns
 libatasmart
 libavc1394
-libavif
 libb2
 libblockdev
 libblockdev-crypto
@@ -233,7 +234,6 @@ libdbusmenu-glib
 libdbusmenu-gtk3
 libde265
 libdecor
-libdeflate
 libdisplay-info
 libdovi
 libdrm
@@ -321,7 +321,6 @@ libproxy
 libpsl
 libpulse
 libraqm
-libraw
 libraw1394
 librsvg
 librsync
@@ -330,7 +329,6 @@ libsasl
 libseccomp
 libsecret
 libsigc++
-libsixel
 libsm
 libsndfile
 libsodium
@@ -399,7 +397,6 @@ libxtst
 libxv
 libxxf86vm
 libyaml
-libyuv
 libzip
 licenses
 lilv
@@ -463,7 +460,6 @@ obsidian
 ocl-icd
 oniguruma
 opencore-amr
-openexr
 openjpeg2
 openssh
 openssl
@@ -534,6 +530,8 @@ python-six
 python-termcolor
 qt5-base
 qt5-declarative
+qt5-graphicaleffects
+qt5-quickcontrols2
 qt5-svg
 qt5-translations
 qt5-wayland
@@ -555,6 +553,7 @@ rubberband
 sbc
 sdbus-cpp
 sddm
+sddm-theme-tokyo-night-git
 sdl2-compat
 sdl3
 seatd
@@ -584,7 +583,6 @@ sudo
 supergfxctl
 svt-av1
 swappy
-swayimg
 swww
 systemd
 systemd-libs
@@ -595,6 +593,7 @@ texinfo
 tinysparql
 tk
 tldr
+tokyonight-gtk-theme-git
 tomlplusplus
 totem-pl-parser
 tpm2-tss

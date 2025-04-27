@@ -18,7 +18,7 @@
 #             the wallpapers included in the theme you are in.
 
 # Set some variables
-wall_dir="${HOME}/Pictures/wallpapers/"
+wall_dir="${HOME}/.config/wallpapers"
 cacheDir="${HOME}/.cache/aditya/${theme}"
 
 # Create cache dir if not exists
@@ -44,7 +44,7 @@ for imagen in "$wall_dir"/*.{jpg,jpeg,png,webp}; do
 done
 
 # Select a picture with rofi
-wall_selection=$(find "${wall_dir}" -maxdepth 1 -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.webp" \) -exec basename {} \; | sort | while read -r A; do echo -en "$A\x00icon\x1f""${cacheDir}"/"$A\n"; done | rofi -dmenu -theme ~/.config/rofi/wallSelect.rasi -p "Select Wallpaper")
+wall_selection=$(find "${wall_dir}" -maxdepth 1 -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.webp" \) -exec basename {} \; | sort | while read -r A; do echo -en "$A\x00icon\x1f""${cacheDir}"/"$A\n"; done | rofi -dmenu -theme ~/.config/rofi/launchers/type-6/style-2.rasi -p "Select Wallpaper")
 
 # Set the wallpaper
 [[ -n "$wall_selection" ]] || exit 1

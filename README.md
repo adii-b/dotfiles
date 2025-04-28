@@ -12,6 +12,6 @@
 - Code Editors -> VSCode, Neovim
 - Font -> Input Mono, Maple Mono
 - Color Picker -> Hyprpicker
-- GTK Theme -> Catppuccin-Mocha
+- GTK Theme -> Tokyo-Night
 - Status Bar -> Waybar
 - Launch Menu -> Rofi Wayland

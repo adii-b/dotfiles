@@ -65,6 +65,7 @@ default-cursors
 desktop-file-utils
 device-mapper
 diffutils
+dmidecode
 double-conversion
 downgrade
 duktape
@@ -459,6 +460,7 @@ nwg-look
 obsidian
 ocl-icd
 oniguruma
+openbsd-netcat
 opencore-amr
 openjpeg2
 openssh
@@ -621,11 +623,11 @@ util-linux-libs
 v4l-utils
 vapoursynth
 vid.stab
-visual-studio-code-bin
 vmaf
 volume_key
 vulkan-icd-loader
 vulkan-radeon
+vulkan-tools
 waybar
 wayland
 wayland-protocols
@@ -672,6 +674,7 @@ yay-bin
 yyjson
 zathura
 zathura-pdf-poppler
+zed
 zeromq
 zimg
 zip

@@ -49,11 +49,11 @@
     "liga": true
   },
   "current_line_highlight": "gutter",
-  "buffer_font_size": 18,
+  "buffer_font_size": 19,
   "format_on_save": "on",
   "terminal": {
     "font_family": "Maple Mono",
-    "font_size": 17,
+    "font_size": 18,
     "cursor_shape": "bar",
     "cursor_blink": true
   },

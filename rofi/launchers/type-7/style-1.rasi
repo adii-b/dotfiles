@@ -20,15 +20,8 @@ configuration {
 }
 
 /*****----- Global Properties -----*****/
-* {
-    font:                        "JetBrains Mono Nerd Font 10";
-    background:                  #11092D;
-    background-alt:              #281657;
-    foreground:                  #FFFFFF;
-    selected:                    #DF5296;
-    active:                      #6E77FF;
-    urgent:                      #8E3596;
-}
+@import "./shared/colors.rasi"
+@import "./shared/fonts.rasi"
 
 /*****----- Main Window -----*****/
 window {
@@ -71,7 +64,7 @@ inputbar {
     spacing:                     10px;
     padding:                     80px 60px;
     background-color:            transparent;
-    background-image:            url("~/.config/rofi/images/a.png", width);
+    background-image:            url("~/.config/wallpapers/tn-glados-better.jpg", width);
     text-color:                  @foreground;
     orientation:                 horizontal;
     children:                    [ "textbox-prompt-colon", "entry", "dummy", "mode-switcher" ];
@@ -118,7 +111,7 @@ button {
     cursor:                      pointer;
 }
 button selected {
-    background-color:            @selected;
+    background-color:            @lavender;
     text-color:                  @foreground;
 }
 
@@ -164,16 +157,16 @@ element normal.active {
     text-color:                  @foreground;
 }
 element selected.normal {
-    background-color:            @selected;
-    text-color:                  @foreground;
+    background-color:            @lavender;
+    text-color:                  @base;
 }
 element selected.urgent {
     background-color:            @urgent;
     text-color:                  @foreground;
 }
 element selected.active {
-    background-color:            @urgent;
-    text-color:                  @foreground;
+    background-color:            @lavender;
+    text-color:                  @base;
 }
 element-icon {
     background-color:            transparent;

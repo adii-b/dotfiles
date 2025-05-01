@@ -15,6 +15,7 @@
     "hyprland/workspaces"
   ],
   "modules-right": [
+    "custom/rog",
     "tray",
     "clock",
     "custom/powermenu"
@@ -104,7 +105,7 @@
   "memory": {
     "on-click": "sleep 0.1 && kitty btop",
     "interval": 1,
-    "format": "  {used} GiB",
+    "format": "  {used}GiB",
     "states": {
       "warning": 85
     }
@@ -112,6 +113,12 @@
   "cpu": {
     "interval": 1,
     "format": "󰻠 {usage}%"
+  },
+  "custom/rog": {
+    "format": "  {}",
+    "exec": "asusctl profile -p | awk '{print $4}'",
+    "on-click": "asusctl profile -n",
+    "restart-interval": 1
   },
   "mpd": {
     "max-length": 25,

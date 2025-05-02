@@ -42,9 +42,9 @@ icon-path=/usr/share/icons/Papirus-Dark/
 
 # Colors (Catppuccin Mocha)
 
-background-color=#232634
-text-color=#c6d0f5
-border-color=#babbf1
+background-color=#1e1e2e
+text-color=#cdd6f4
+border-color=#b4befe
 progress-color=over #313244
 
 # Per-mode settings

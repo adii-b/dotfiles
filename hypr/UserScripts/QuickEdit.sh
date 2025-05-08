@@ -3,6 +3,7 @@
 
 configs="$HOME/.config/hypr/configs"
 UserConfigs="$HOME/.config/hypr/UserConfigs"
+export "MICRO_TRUECOLOR=1"
 
 menu() {
   printf "View Env-variables\n"
@@ -21,34 +22,34 @@ main() {
   choice=$(menu | rofi -dmenu -i -theme ~/.config/rofi/launchers/type-6/style-1.rasi -p "Select a file to edit:")
   case $choice in
   "View Env-variables")
-    kitty -e nvim "$UserConfigs/ENVariables.conf"
+    kitty -e micro "$UserConfigs/ENVariables.conf"
     ;;
   "View Window-Rules")
-    kitty -e nvim "$UserConfigs/WindowRules.conf"
+    kitty -e micro "$UserConfigs/WindowRules.conf"
     ;;
   "View Startup_Apps")
-    kitty -e nvim "$UserConfigs/Startup_Apps.conf"
+    kitty -e micro "$UserConfigs/Startup_Apps.conf"
     ;;
   "View User-Keybinds")
-    kitty -e nvim "$UserConfigs/UserKeybinds.conf"
+    kitty -e micro "$UserConfigs/UserKeybinds.conf"
     ;;
   "View Monitors")
-    kitty -e nvim "$UserConfigs/Monitors.conf"
+    kitty -e micro "$UserConfigs/Monitors.conf"
     ;;
   "View Laptop-Keybinds")
-    kitty -e nvim "$UserConfigs/Laptops.conf"
+    kitty -e micro "$UserConfigs/Laptops.conf"
     ;;
   "View User-Settings")
-    kitty -e nvim "$UserConfigs/UserSettings.conf"
+    kitty -e micro "$UserConfigs/UserSettings.conf"
     ;;
   "View Workspace-Rules")
-    kitty -e nvim "$UserConfigs/WorkspaceRules.conf"
+    kitty -e micro "$UserConfigs/WorkspaceRules.conf"
     ;;
   "View Default-Settings")
-    kitty -e nvim "$configs/Settings.conf"
+    kitty -e micro "$configs/Settings.conf"
     ;;
   "View Default-Keybinds")
-    kitty -e nvim "$configs/Keybinds.conf"
+    kitty -e micro "$configs/Keybinds.conf"
     ;;
   *) ;;
   esac

@@ -71,4 +71,5 @@ Unknown Organization/
 google-chrome/
 Vivaldi/
 vivaldi/
-micro/buffers
+micro/buffers/*
+micro/backups/*

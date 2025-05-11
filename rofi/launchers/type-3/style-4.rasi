@@ -25,7 +25,8 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       750px;
+    width:                       1750px;
+    // height:						 px;
     x-offset:                    0px;
     y-offset:                    0px;
 
@@ -91,7 +92,7 @@ entry {
 listview {
     enabled:                     true;
     columns:                     6;
-    lines:                       3;
+    lines:                       1;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
@@ -120,7 +121,7 @@ scrollbar {
 /*****----- Elements -----*****/
 element {
     enabled:                     true;
-    spacing:                     15px;
+    spacing:                     20px;
     margin:                      0px;
     padding:                     20px 10px;
     border:                      0px solid;
@@ -145,7 +146,7 @@ element selected.normal {
 element-icon {
     background-color:            transparent;
     text-color:                  inherit;
-    size:                        64px;
+    size:                        250px;
     cursor:                      inherit;
 }
 element-text {

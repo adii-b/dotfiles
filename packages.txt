@@ -40,6 +40,7 @@ iptables-nft
 jq
 kitty
 lazygit
+libcanberra
 libgnome-keyring
 libnotify
 linux
@@ -56,9 +57,9 @@ npm
 nwg-look
 obsidian
 os-prober
-otf-hasklig-nerd
 pamixer
 papirus-icon-theme
+pipewire-alsa
 pipewire-jack
 pipewire-pulse
 plocate
@@ -95,6 +96,7 @@ xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 zathura
 zathura-pdf-poppler
+zed
 zip
 zoxide
 zsh

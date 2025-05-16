@@ -25,7 +25,7 @@ cacheDir="${HOME}/.cache/aditya/${theme}"
 if [ ! -d "${cacheDir}" ]; then
   mkdir -p "${cacheDir}"
 fi
-
+# type-3/style-4
 physical_monitor_size=24
 monitor_res=$(hyprctl monitors | grep -A2 Monitor | head -n 2 | awk '{print $1}' | grep -oE '^[0-9]+')
 dotsperinch=$(echo "scale=2; $monitor_res / $physical_monitor_size" | bc | xargs printf "%.0f")
@@ -48,6 +48,6 @@ wall_selection=$(find "${wall_dir}" -maxdepth 1 -type f \( -iname "*.jpg" -o -in
 
 # Set the wallpaper
 [[ -n "$wall_selection" ]] || exit 1
-swww img ${wall_dir}/${wall_selection}
+swww img --transition-type wipe --transition-angle 45 ${wall_dir}/${wall_selection}
 
 exit 0

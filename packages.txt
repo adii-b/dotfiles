@@ -36,6 +36,7 @@ hyprpicker
 imagemagick
 imv
 inetutils
+inotify-tools
 iptables-nft
 jq
 kitty
@@ -54,9 +55,11 @@ nodejs-lts-jod
 noto-fonts-cjk
 noto-fonts-emoji
 npm
+ntfs-3g
 nwg-look
 obsidian
 os-prober
+otf-hasklig-nerd
 pamixer
 papirus-icon-theme
 pipewire-alsa
@@ -96,7 +99,6 @@ xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 zathura
 zathura-pdf-poppler
-zed
 zip
 zoxide
 zsh

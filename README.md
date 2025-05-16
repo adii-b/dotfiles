@@ -9,8 +9,8 @@
 - Window Manager -> Hyprland
 - PDF Viewer -> Zathura
 - Browser -> Google Chrome
-- Code Editors -> VSCode, Zed
-- Font -> Styrene A, JetBrainsMono Nerd Font
+- Code Editors -> VSCode
+- Font -> Input
 - Color Picker -> Hyprpicker
 - GTK Theme -> Catppuccin-Mocha
 - Status Bar -> Waybar

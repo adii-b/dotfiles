@@ -7,10 +7,10 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "ui_font_size": 16,
-  "ui_font_family": "Styrene A Trial",
-  "buffer_font_size": 17,
-  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "ui_font_size": 17,
+  "ui_font_family": "Ubuntu",
+  "buffer_font_size": 23,
+  "buffer_font_family": "Ubuntu Mono",
   "current_line_highlight": "gutter",
   "features": {
     "edit_prediction_provider": "zed"
@@ -50,5 +50,24 @@
   },
   "collaboration_panel": {
     "dock": "right"
+  },
+  "languages": {
+    "Python": {
+      "language_servers": ["pyright", "ruff"],
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "code_actions": {
+            "source.organizeImports.ruff": true,
+            "source.fixAll.ruff": true
+          }
+        },
+        {
+          "language_server": {
+            "name": "ruff"
+          }
+        }
+      ]
+    }
   }
 }

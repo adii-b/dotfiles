@@ -3,10 +3,10 @@
 /* Global */
 * {
   border: none;
-  border-radius: 7px;
-  font-family: "JetBrainsMono Nerd Font";
-  font-weight: 600;
-  font-size: 15;
+  border-radius: 0px;
+  font-family: "Input Mono";
+  font-weight: 700;
+  font-size: 100%;
 }
 
 @keyframes blink_red {
@@ -46,6 +46,7 @@
 #custom-pomodoro,
 #custom-dexcom,
 #custom-rog,
+#window,
 #custom-notification {
   border: 1px solid @lavender;
   background-color: shade(@base, 0.9);
@@ -53,18 +54,12 @@
   padding: 1.5px 7px 1.5px 7px;
   margin-top: 5px;
   margin-bottom: 5px;
-  border-radius: 7px 7px 7px 7px;
+  border-radius: 0px;
   margin-right: 5px;
   margin-left: 5px;
 }
 
 /* Bar */
-
-#window {
-  border-radius: 7px;
-  margin-left: 5px;
-  margin-right: 5px;
-}
 
 window#waybar {
   /* background-color: #181825; */
@@ -96,10 +91,10 @@ body window>box {
   padding: 1.5px 7px 1.5px 7px;
   margin-top: 5px;
   margin-bottom: 5px;
-  border-radius: 7px 7px 7px 7px;
+  border-radius: 0px;
   margin-right: 5px;
   margin-left: 0px;
-  border-radius: 7px;
+  border-radius: 0px;
   background-color: shade(@crust, 0.9);
   color: @blue;
   /* border: .2px solid transparent; */

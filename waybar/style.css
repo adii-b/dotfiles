@@ -4,9 +4,9 @@
 * {
   border: none;
   border-radius: 0px;
-  font-family: "Input Mono";
-  font-weight: 700;
-  font-size: 100%;
+  font-family: "Hasklig";
+  font-weight: 500;
+  font-size: 15;
 }
 
 @keyframes blink_red {

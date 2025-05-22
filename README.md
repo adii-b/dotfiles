@@ -8,9 +8,9 @@
 - ScreenShot tool -> Grim
 - Window Manager -> Hyprland
 - PDF Viewer -> Zathura
-- Browser -> Google Chrome
+- Browser -> Brave
 - Code Editors -> VSCode
-- Font -> Input
+- Font -> Rubik, MonoLisa
 - Color Picker -> Hyprpicker
 - GTK Theme -> Catppuccin-Mocha
 - Status Bar -> Waybar

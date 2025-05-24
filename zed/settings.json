@@ -10,7 +10,7 @@
   "ui_font_size": 16,
   "ui_font_family": "Rubik",
   "buffer_font_size": 17,
-  "buffer_font_family": "MonoLisa",
+  "buffer_font_family": "Maple Mono",
   "buffer_font_weight": 400,
   "current_line_highlight": "gutter",
   "minimap": { "show": "never" },
@@ -23,8 +23,8 @@
   "show_edit_predictions": false,
   "soft_wrap": "editor_width",
   "terminal": {
-    "font_size": 20,
-    "font_family": "Inconsolata",
+    "font_size": 17,
+    "font_family": "Maple Mono",
     "font_fallbacks": ["JetBrainsMono Nerd Font"],
     "cursor_shape": "bar",
     "blinking": "on"

@@ -10,7 +10,7 @@
 - PDF Viewer -> Zathura
 - Browser -> Brave
 - Code Editors -> VSCode
-- Font -> Rubik, MonoLisa
+- Font -> Rubik, CaskaydiaCove Nerd Font
 - Color Picker -> Hyprpicker
 - GTK Theme -> Catppuccin-Mocha
 - Status Bar -> Waybar

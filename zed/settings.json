@@ -8,9 +8,9 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "ui_font_size": 16,
-  "ui_font_family": "Rubik",
+  "ui_font_family": "Styrene A Trial",
   "buffer_font_size": 17,
-  "buffer_font_family": "Maple Mono",
+  "buffer_font_family": "Maple Mono NF",
   "buffer_font_weight": 400,
   "current_line_highlight": "gutter",
   "minimap": { "show": "never" },
@@ -23,18 +23,18 @@
   "show_edit_predictions": false,
   "soft_wrap": "editor_width",
   "terminal": {
-    "font_size": 17,
-    "font_family": "Maple Mono",
-    "font_fallbacks": ["JetBrainsMono Nerd Font"],
+    "font_size": 16,
+    "font_family": "Maple Mono NF",
+    "font_fallbacks": ["Adwaita Mono"],
     "cursor_shape": "bar",
     "blinking": "on"
   },
   "theme": {
     "mode": "system",
-    "light": "Catppuccin Latte - No Italics",
+    "light": "Catppuccin Mocha - No Italics",
     "dark": "Catppuccin Mocha - No Italics"
   },
-  "icon_theme": "Material Icon Theme",
+  "icon_theme": "Catppuccin Mocha",
   "agent": {
     "default_profile": "ask",
     "model_parameters": [],
@@ -64,17 +64,14 @@
       "format_on_save": "on",
       "formatter": [
         {
-          "code_actions": {
-            "source.organizeImports.ruff": true,
-            "source.fixAll.ruff": true
-          }
-        },
-        {
           "language_server": {
-            "name": "pyright"
+            "name": "ruff"
           }
         }
       ]
+    },
+    "Java": {
+      "format_on_save": "language_server"
     }
   }
 }

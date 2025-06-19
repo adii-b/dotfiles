@@ -65,18 +65,18 @@ inputbar {
     spacing:                     10px;
     padding:                     80px 60px;
     background-color:            transparent;
-    background-image:            url("~/.config/wallpapers/tn-glados-better.jpg", width);
+    background-image:            url("~/.config/wallpapers/hyprland_kath.png", width);
     text-color:                  @foreground;
     orientation:                 horizontal;
     children:                    [ "textbox-prompt-colon", "entry", "dummy", "mode-switcher" ];
 }
 textbox-prompt-colon {
-    enabled:                     true;
+    enabled:                     false;
     expand:                      false;
-    str:                         "";
+    str:                         " Search";
     padding:                     12px 15px;
     border-radius:               0px;
-    background-color:            @background-alt;
+    background-color:            transparent;
     text-color:                  inherit;
 }
 entry {
@@ -85,10 +85,10 @@ entry {
     width:                       250px;
     padding:                     12px 16px;
     border-radius:               0px;
-    background-color:            @background-alt;
+    background-color:            transparent;
     text-color:                  inherit;
     cursor:                      text;
-    placeholder:                 "Search";
+    placeholder:                 " ";
     placeholder-color:           inherit;
 }
 dummy {

@@ -3,9 +3,9 @@
 /* Global */
 * {
   border: none;
-  border-radius: 0px;
-  font-family: "Maple Mono";
-  font-weight: 600;
+  /* border-radius: 0px; */
+  font-family: "Maple Mono NF";
+  font-weight: 500;
   font-size: 15;
 }
 
@@ -48,13 +48,14 @@
 #custom-rog,
 #window,
 #custom-notification {
-  border: 1px solid @lavender;
+  /* border: 1px solid @lavender; */
+  border-radius: 11px;
   background-color: shade(@base, 0.9);
   opacity: 1;
   padding: 1.5px 7px 1.5px 7px;
   margin-top: 5px;
   margin-bottom: 5px;
-  border-radius: 0px;
+  /* border-radius: 0px; */
   margin-right: 5px;
   margin-left: 5px;
 }
@@ -87,14 +88,14 @@ body window>box {
 }
 
 #workspaces button {
-  border: 1px solid @lavender;
+  /* border: 1px solid @lavender; */
   padding: 1.5px 7px 1.5px 7px;
   margin-top: 5px;
   margin-bottom: 5px;
-  border-radius: 0px;
+  border-radius: 11px;
   margin-right: 5px;
   margin-left: 0px;
-  border-radius: 0px;
+  border-radius: 10px;
   background-color: shade(@crust, 0.9);
   color: @blue;
   /* border: .2px solid transparent; */

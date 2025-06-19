@@ -18,7 +18,7 @@
 #             the wallpapers included in the theme you are in.
 
 # Set some variables
-wall_dir="${HOME}/Pictures/wallpapers/"
+wall_dir="${HOME}/.config/wallpapers/"
 cacheDir="${HOME}/.cache/aditya/${theme}"
 
 # Create cache dir if not exists

@@ -1,7 +1,7 @@
 # vim:fileencoding=utf-8:foldmethod=marker
 
 # BEGIN_KITTY_FONTS
-font_family      family="Monaco"
+font_family      family="Victor Mono"
 bold_font        auto
 italic_font      auto
 bold_italic_font auto
@@ -118,7 +118,7 @@ font_size 13
 #: to get BIDI support, because it will force kitty to always treat
 #: the text as LTR, which FriBidi expects for terminals.
 
-symbol_map U+279C,U+2717 JetBrainsMono Nerd Font
+symbol_map U+279C,U+2717 Maple Mono NF
 
 #: E.g. symbol_map U+E0A0-U+E0A3,U+E0C0-U+E0C7 PowerlineSymbols
 
@@ -146,7 +146,7 @@ symbol_map U+279C,U+2717 JetBrainsMono Nerd Font
 
 #:     narrow_symbols codepoints [optionally the number of cells]
 
-disable_ligatures never
+disable_ligatures always
 
 #: Choose how you want to handle multi-character ligatures. The
 #: default is to always render them. You can tell kitty to not render

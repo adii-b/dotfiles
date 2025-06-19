@@ -54,7 +54,7 @@ mainbox {
 imagebox {
     padding:                     20px;
     background-color:            transparent;
-    background-image:            url("~/Pictures/wallpapers/tn-glados-better.jpg", height);
+    background-image:            url("~/.config/wallpapers/hyprland_kath.png", height);
     orientation:                 vertical;
     children:                    [ "inputbar", "dummy", "mode-switcher" ];
 }
@@ -77,12 +77,12 @@ inputbar {
     spacing:                     10px;
     padding:                     15px;
     border-radius:               0px;
-    background-color:            @background-alt;
+    background-color:            transparent;
     text-color:                  @foreground;
     children:                    [ "textbox-prompt-colon", "entry" ];
 }
 textbox-prompt-colon {
-    enabled:                     true;
+    enabled:                     false;
     expand:                      false;
     str:                         "";
     background-color:            inherit;
@@ -90,16 +90,16 @@ textbox-prompt-colon {
 }
 entry {
     enabled:                     true;
-    background-color:            inherit;
+    background-color:            transparent;
     text-color:                  inherit;
     cursor:                      text;
-    placeholder:                 "Search";
+    placeholder:                 " ";
     placeholder-color:           inherit;
 }
 
 /*****----- Mode Switcher -----*****/
 mode-switcher{
-    enabled:                     true;
+    enabled:                     false;
     spacing:                     20px;
     background-color:            transparent;
     text-color:                  @foreground;

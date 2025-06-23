@@ -2,14 +2,9 @@
 
 plugins = ["scratchpads", "magnify"]
 
-# [scratchpads.term]
-# animation = "fromTop"
-# command = "wezterm start --class wezterm-dropterm"
-# size = "75% 60%"
-
-[scratchpads.term_quake]
-command = "wezterm start --class term_quake"
-position = "50% 0%"
-size = "50% 50%"
-class = "term_quake"
-use = "terminals"
+[scratchpads.term]
+command = "kitty --class kitty-dropterm"
+animation = "fromTop"
+position = "12% 7%"
+size = "75% 58%"
+class = "kitty-dropterm"

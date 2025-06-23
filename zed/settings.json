@@ -8,7 +8,7 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "ui_font_size": 16,
-  "ui_font_family": "Styrene A Trial",
+  "ui_font_family": "Maple Mono NF",
   "buffer_font_size": 17,
   "buffer_font_family": "Maple Mono NF",
   "buffer_font_weight": 400,
@@ -25,7 +25,7 @@
   "terminal": {
     "font_size": 16,
     "font_family": "Maple Mono NF",
-    "font_fallbacks": ["Adwaita Mono"],
+    "font_fallbacks": ["Maple Mono NF"],
     "cursor_shape": "bar",
     "blinking": "on"
   },

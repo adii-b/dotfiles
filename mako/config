@@ -36,7 +36,7 @@ ignore-timeout=0
 text-alignment=center
 default-timeout=3000
 on-button-left=dismiss-all
-font=Styrene A Trial 12
+font=JetBrainsMono Nerd Font 12
 icon-path=/usr/share/icons/Papirus-Dark/
 
 

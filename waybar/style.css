@@ -4,9 +4,9 @@
 * {
   border: none;
   /* border-radius: 0px; */
-  font-family: "SF Pro Text, JetBrainsMono Nerd Font";
+  font-family: "Maple Mono NF";
   font-weight: 500;
-  font-size: 14;
+  font-size: 15;
 }
 
 @keyframes blink_red {

@@ -54,7 +54,7 @@ mainbox {
 imagebox {
     padding:                     20px;
     background-color:            transparent;
-    background-image:            url("~/.config/wallpapers/hyprland_kath.png", height);
+    background-image:            url("~/.config/wallpapers/tn-glados-better.jpg", height);
     orientation:                 vertical;
     children:                    [ "inputbar", "dummy", "mode-switcher" ];
 }

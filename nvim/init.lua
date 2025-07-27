@@ -1,7 +1,8 @@
+-- ~/.config/nvim/init.lua
 -- OPTIONS
 vim.opt.clipboard = "unnamedplus"
 vim.opt.number = true
-vim.opt.relativenumber = true
+vim.opt.relativenumber = false
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
@@ -31,11 +32,27 @@ require("lazy").setup({
     config = function()
       require("catppuccin").setup({
         flavour = "mocha",
+        styles = {
+          comments = {},
+          conditionals = {},
+          loops = {},
+          functions = {},
+          keywords = {},
+          strings = {},
+          variables = {},
+          numbers = {},
+          booleans = {},
+          properties = {},
+          types = {},
+          operators = {},
+        },
       })
       vim.cmd.colorscheme("catppuccin")
+    vim.api.nvim_set_hl(0, "LineNr", { fg = "#a6adc8" })
+    vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#f5e0dc", bold = true })
     end,
   },
-    {
+  {
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()

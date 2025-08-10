@@ -25,40 +25,28 @@ vim.opt.rtp:prepend(lazypath)
 
 -- PLUGIN SETUP
 require("lazy").setup({
-  {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    priority = 1000,
-    config = function()
-      require("catppuccin").setup({
-        flavour = "mocha",
-        styles = {
-          comments = {},
-          conditionals = {},
-          loops = {},
-          functions = {},
-          keywords = {},
-          strings = {},
-          variables = {},
-          numbers = {},
-          booleans = {},
-          properties = {},
-          types = {},
-          operators = {},
-        },
-      })
-      vim.cmd.colorscheme("catppuccin")
+{
+  "catppuccin/nvim",
+  name = "catppuccin",
+  priority = 1000,
+  config = function()
+    require("catppuccin").setup({
+      flavour = "mocha",
+    })
+    vim.cmd.colorscheme("catppuccin")
+
+    -- 🔥 Highlight line numbers with Catppuccin colors
     vim.api.nvim_set_hl(0, "LineNr", { fg = "#a6adc8" })
     vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#f5e0dc", bold = true })
-    end,
-  },
+  end,
+},
   {
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
       require("lualine").setup({
         options = {
-          theme = "catppuccin",
+          theme = "auto",
           section_separators = "",
           component_separators = "",
         },

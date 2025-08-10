@@ -7,10 +7,11 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "ui_font_size": 16,
-  "ui_font_family": "Google Sans",
+  "theme": "One Dark",
+  "ui_font_size": 17,
+  "ui_font_family": "Ubuntu",
   "buffer_font_size": 17,
-  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_family": "Maple Mono NF",
   "buffer_font_weight": 400,
   "current_line_highlight": "gutter",
   "minimap": { "show": "never" },
@@ -24,22 +25,16 @@
   "soft_wrap": "editor_width",
   "terminal": {
     "font_size": 16,
-    "font_family": "JetBrainsMono Nerd Font",
-    "font_fallbacks": ["JetBrainsMono Nerd Font"],
+    "font_family": "Maple Mono NF",
+    "font_fallbacks": ["Maple Mono NF"],
     "cursor_shape": "bar",
     "blinking": "on"
-  },
-  "theme": {
-    "mode": "system",
-    "light": "Catppuccin Mocha - No Italics",
-    "dark": "Catppuccin Mocha - No Italics"
   },
   "icon_theme": "Material Icon Theme",
   "agent": {
     "default_profile": "ask",
     "model_parameters": [],
-    "dock": "left",
-    "version": "2"
+    "dock": "left"
   },
   "agent_font_size": 17,
   "project_panel": {
@@ -69,9 +64,6 @@
           }
         }
       ]
-    },
-    "Java": {
-      "format_on_save": "language_server"
     }
   }
 }

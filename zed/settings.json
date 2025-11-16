@@ -7,11 +7,11 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "theme": "One Dark",
+  "theme": "Catppuccin Mocha",
   "ui_font_size": 17,
-  "ui_font_family": "Ubuntu",
-  "buffer_font_size": 17,
-  "buffer_font_family": "Maple Mono NF",
+  "ui_font_family": "Ubuntu Nerd Font",
+  "buffer_font_size": 23,
+  "buffer_font_family": "CaskaydiaCove Nerd Font",
   "buffer_font_weight": 400,
   "current_line_highlight": "gutter",
   "minimap": { "show": "never" },
@@ -24,9 +24,9 @@
   "show_edit_predictions": false,
   "soft_wrap": "editor_width",
   "terminal": {
-    "font_size": 16,
-    "font_family": "Maple Mono NF",
-    "font_fallbacks": ["Maple Mono NF"],
+    "font_size": 19,
+    "font_family": "CaskaydiaCove Nerd Font",
+    "font_fallbacks": ["JetBrainsMono Nerd Font"],
     "cursor_shape": "bar",
     "blinking": "on"
   },
@@ -36,16 +36,13 @@
     "model_parameters": [],
     "dock": "left"
   },
-  "agent_font_size": 17,
+  "agent_ui_font_size": 17,
   "project_panel": {
     "dock": "right",
     "auto_fold_dirs": false
   },
   "git_panel": {
     "dock": "right"
-  },
-  "chat_panel": {
-    "dock": "left"
   },
   "outline_panel": {
     "dock": "right"

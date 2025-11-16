@@ -117,7 +117,7 @@
   },
   "custom/rog": {
     "format": "  {}",
-    "exec": "asusctl profile -p | awk '{print $4}'",
+    "exec": "asusctl profile -p | awk '{print $5}'",
     "on-click": "asusctl profile -n",
     "restart-interval": 1
   },

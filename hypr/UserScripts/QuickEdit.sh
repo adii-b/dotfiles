@@ -45,7 +45,7 @@ main() {
     kitty -e nvim "$UserConfigs/UserSettings.conf"
     ;;
   "View Workspace-Rules")
-     kitty -e nvim "$UserConfigs/WorkspaceRules.conf"
+    kitty -e nvim "$UserConfigs/WorkspaceRules.conf"
     ;;
   "View Default-Settings")
     kitty -e nvim "$configs/Settings.conf"

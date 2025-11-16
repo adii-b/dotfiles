@@ -6,6 +6,7 @@ microsoft-edge/
 Postman/
 Electron/
 rog/
+pgadmin*
 pulse/
 xsettingsd/
 nwg-look/
@@ -23,3 +24,4 @@ vivaldi/
 jgit/
 opera/
 configstore/
+.mozilla/
